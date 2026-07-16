@@ -17,7 +17,7 @@ const cardStyles = [
   'bg-hlc-gold-500 text-hlc-blue-900',
   'bg-hlc-blue-50 text-hlc-blue-900',
   'bg-hlc-blue-700 text-white',
-  'bg-[#eef2f7] text-hlc-blue-900',
+  'bg-hlc-blue-50 text-hlc-blue-900',
   'bg-hlc-gold-600 text-white',
 ]
 
@@ -38,9 +38,9 @@ export default function CommitmentCarousel({
   const [progress, setProgress] = useState(0)
 
   const images = [
-    "https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800",
     "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1548612185-30061e8784be?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1610028290816-5d937a395a49?auto=format&fit=crop&q=80&w=800",
     "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800"
   ]
 
@@ -182,7 +182,7 @@ export default function CommitmentCarousel({
               {item.type === 'text' ? (
                 <div className="p-8 lg:p-10 flex flex-col justify-between h-full">
                   <div>
-                    <h3 className="mb-4 text-2xl font-medium leading-tight lg:text-3xl">
+                    <h3 className="mb-4 text-2xl font-medium leading-tight lg:text-3xl text-inherit">
                       <span className="opacity-50 mr-3">{item.colorIdx + 1}.</span>
                       {item.data.title}
                     </h3>

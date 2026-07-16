@@ -69,7 +69,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
             </div>
             <a
               href="#sobre"
-              className="inline-flex items-center justify-center rounded bg-[#7a729e] px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#6c658a] transition-colors"
+              className="inline-flex items-center justify-center rounded bg-hlc-blue-800 px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-hlc-blue-900 transition-colors"
             >
               {c.about.label} &rarr;
             </a>
@@ -157,16 +157,21 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Reference projects */}
-      <section id="projectos" className="bg-hlc-blue-50 py-24">
+      <section id="projectos" className="bg-gray-50 py-24 border-t border-gray-100">
         <div className="page-wrap">
-          <span className="section-label">{c.projects.label}</span>
-          <h2 className="mb-6 mt-2 text-3xl font-bold sm:text-4xl">
-            {c.projects.heading}
-          </h2>
-          <p className="max-w-[58ch] text-lg text-[var(--ink-muted)]">
-            {c.projects.intro}
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-medium text-gray-500 mb-4 block">
+              &bull; {c.projects.label}
+            </span>
+            <h2 className="mb-6 mt-2 text-3xl font-medium sm:text-4xl lg:text-[2.75rem] text-gray-900 leading-[1.2]">
+              {c.projects.heading}
+            </h2>
+            <p className="text-lg text-[var(--ink-muted)] font-light leading-relaxed">
+              {c.projects.intro}
+            </p>
+          </div>
+          
+          <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {referenceProjects.map((project) => (
               <ProjectCard
                 key={project.slug}
@@ -179,44 +184,91 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Contact */}
-      <section
-        id="contactos"
-        className="bg-hlc-blue-800 py-24 text-hlc-blue-100"
-      >
+      <section id="contactos" className="bg-white py-24">
         <div className="page-wrap">
-          <span className="section-label text-hlc-gold-300">
-            {c.contact.label}
-          </span>
-          <h2 className="mb-6 mt-2 text-3xl font-bold text-white sm:text-4xl">
-            {c.contact.heading}
-          </h2>
-          <div className="grid gap-8 sm:grid-cols-2">
-            <div>
-              <h3 className="text-lg font-semibold text-white">
-                {c.contact.addressLabel}
-              </h3>
-              <p className="mt-1 max-w-[42ch]">{c.contact.address}</p>
-              <h3 className="mt-6 text-lg font-semibold text-white">
-                {c.contact.emailLabel}
-              </h3>
-              <p className="mt-1">
-                <a
-                  href={`mailto:${c.contact.email}`}
-                  className="text-hlc-gold-300 underline"
-                >
-                  {c.contact.email}
-                </a>
-              </p>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+            
+            {/* Left Sidebar: Contact Information */}
+            <div className="w-full lg:w-[35%] xl:w-1/3">
+              <div className="bg-[#f5f5f5] rounded-xl p-8 lg:p-10 flex flex-col h-full shadow-sm">
+                <h3 className="text-[1.35rem] font-medium text-gray-900 mb-8">Contact information</h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xs text-gray-500 mb-1">{c.contact.emailLabel}</h4>
+                    <p className="text-gray-900 text-sm font-medium">
+                      <a href={`mailto:${c.contact.email}`} className="hover:text-hlc-blue-600 transition-colors">
+                        {c.contact.email}
+                      </a>
+                    </p>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <h4 className="text-[1.15rem] font-medium text-gray-900 mb-4">Main Office:</h4>
+                    <h4 className="text-xs text-gray-500 mb-1">{c.contact.addressLabel}</h4>
+                    <p className="text-gray-900 text-sm leading-relaxed max-w-[280px]">
+                      {c.contact.address}
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xs text-gray-500 mb-1">Office Hours</h4>
+                    <p className="text-gray-900 text-sm">Sunday- Thursday, 8:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <button className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-6 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2">
+                    Contact us <span aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="space-y-1">
-              {c.contact.identity.map((line, i) => (
-                <p
-                  key={i}
-                  className={i === 0 ? 'font-bold text-white' : undefined}
-                >
-                  {line}
+
+            {/* Right Content: Contact Form */}
+            <div className="w-full lg:w-[65%] xl:w-2/3 lg:pt-6">
+              <div className="mb-10">
+                <span className="text-xs font-medium text-gray-500 mb-4 block uppercase tracking-wider">
+                  &bull; {c.contact.label}
+                </span>
+                <h2 className="text-4xl lg:text-[3rem] font-medium text-gray-900 leading-[1.1] mb-3">
+                  Do you have <span className="text-hlc-gold-600">any</span><br/>
+                  <span className="text-hlc-gold-600">questions?</span>
+                </h2>
+                <p className="text-[0.95rem] text-gray-600">
+                  Please fill out the form or contact us using the contact details
                 </p>
-              ))}
+              </div>
+
+              <form className="bg-[#fafafa] rounded-xl p-8 lg:p-10" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-8">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">Name</label>
+                    <input type="text" id="name" placeholder="Enter name" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter Email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">Your Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter phone (optional)" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">Company</label>
+                    <input type="text" id="company" placeholder="Enter Company Name" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                  </div>
+                </div>
+
+                <div className="mb-10">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">Message</label>
+                  <textarea id="message" rows={1} placeholder="Enter Message" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400 resize-none h-[40px]"></textarea>
+                </div>
+
+                <button type="submit" className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-8 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2">
+                  Submit <span aria-hidden="true">&rarr;</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>

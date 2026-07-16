@@ -32,6 +32,7 @@ export const referenceProjects: ReferenceProject[] = [
     },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
   },
   {
     slug: 'han-kiem-2',
@@ -41,6 +42,7 @@ export const referenceProjects: ReferenceProject[] = [
     capacity: { pt: 'Capacidade de 15 MW, 6 turbinas', en: '15 MW capacity, 6 turbines' },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
+    image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=800',
   },
   {
     slug: 'tay-ninh-ttc',
@@ -56,6 +58,7 @@ export const referenceProjects: ReferenceProject[] = [
     },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
+    image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800',
   },
   {
     slug: 'nghi-son-2',
@@ -65,6 +68,7 @@ export const referenceProjects: ReferenceProject[] = [
     // COPY.md: profile provides no capacity; must not be invented.
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
+    image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800',
   },
   {
     slug: 'vinh-tan-4',
@@ -85,6 +89,7 @@ export const referenceProjects: ReferenceProject[] = [
       en: 'Source: CC1 website',
     },
     sourceUrl: 'https://www.cc1.vn/en/project/nha-may-nhiet-dien-vinh-tan-4',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800',
   },
 ]
 
