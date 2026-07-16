@@ -1,0 +1,6 @@
+# Native deps whose install/build scripts are explicitly approved to run.
+# Equivalent to what `pnpm approve-builds` records — scoped to these packages,
+# not a blanket allow-all.
+onlyBuiltDependencies:
+  - esbuild
+  - lightningcss
