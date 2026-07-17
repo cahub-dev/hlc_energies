@@ -9,6 +9,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import SmoothScroll from '@/components/SmoothScroll'
 import { content } from '@/content/site'
 import { localeFromPath } from '@/lib/i18n'
 import { jsonLd } from '@/lib/seo'
@@ -61,9 +62,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <a className="skip-link" href="#main">
           {c.ui.skipToContent}
         </a>
-        <Nav locale={locale} nav={c.nav} ui={c.ui} />
-        <main id="main">{children}</main>
-        <Footer locale={locale} />
+        <SmoothScroll>
+          <Nav locale={locale} nav={c.nav} ui={c.ui} />
+          <main id="main">{children}</main>
+          <Footer locale={locale} />
+        </SmoothScroll>
         <TanStackDevtools
           config={{ position: 'bottom-right' }}
           plugins={[

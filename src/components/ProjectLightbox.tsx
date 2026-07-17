@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { useLenis } from 'lenis/react'
 import type { Locale, ReferenceProject } from '@/content/types'
 
 gsap.registerPlugin(useGSAP)
@@ -29,10 +30,18 @@ export default function ProjectLightbox({
   const imgRef = useRef<HTMLImageElement>(null)
   const closeBtnRef = useRef<HTMLButtonElement>(null)
 
+  const lenis = useLenis()
+
   const go = useCallback(
     (dir: number) => setIndex((i) => (i + dir + total) % total),
     [total],
   )
+
+  // Pause Lenis smooth scrolling while the dialog is open.
+  useEffect(() => {
+    lenis?.stop()
+    return () => lenis?.start()
+  }, [lenis])
 
   // Open animation (runs once).
   useGSAP(
