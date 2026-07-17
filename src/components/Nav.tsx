@@ -64,7 +64,7 @@ export default function Nav({
             className="hidden sm:inline-flex whitespace-nowrap items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:bg-gray-50 transition-colors"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-gray-800"></span>
-            Contact us
+            {ui.contact}
           </a>
           
           <button
@@ -73,7 +73,7 @@ export default function Nav({
             aria-controls="primary-menu"
             onClick={() => setOpen((v) => !v)}
             className="lg:hidden inline-flex items-center justify-center rounded-full bg-white w-10 h-10 shadow-sm hover:bg-gray-50 transition-colors"
-            aria-label="Menu"
+            aria-label={ui.menu}
           >
             <div className="space-y-1">
               <span className="block w-4 h-0.5 bg-gray-800"></span>

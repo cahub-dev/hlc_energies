@@ -44,14 +44,48 @@ export type SiteContent = {
   contact: {
     label: string
     heading: string
+    infoTitle: string
     addressLabel: string
     address: string
     emailLabel: string
     email: string
+    cta: string
     identity: string[]
+    form: ContactForm
   }
-  footer: { copyright: string }
-  ui: { skipToContent: string; switchTo: string; menu: string; close: string }
+  footer: {
+    tagline: string
+    navTitle: string
+    areasTitle: string
+    contactTitle: string
+    contactCta: string
+    backToTop: string
+    copyright: string
+  }
+  ui: {
+    skipToContent: string
+    switchTo: string
+    menu: string
+    close: string
+    contact: string
+  }
+}
+
+export type ContactForm = {
+  heading: string
+  headingAccent: string
+  intro: string
+  name: string
+  namePlaceholder: string
+  email: string
+  emailPlaceholder: string
+  phone: string
+  phonePlaceholder: string
+  company: string
+  companyPlaceholder: string
+  message: string
+  messagePlaceholder: string
+  submit: string
 }
 
 /**

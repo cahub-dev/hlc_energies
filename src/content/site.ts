@@ -114,19 +114,44 @@ const pt: SiteContent = {
   contact: {
     label: 'Contactos',
     heading: 'Contactos',
+    infoTitle: 'Informação de contacto',
     addressLabel: 'Morada',
     address:
       'Moçambique, Cidade de Maputo, Distrito de Kamavota, Bairro Costa do Sol, Rua de Micaia, Q. N.º 56, N.º 115',
     emailLabel: 'E-mail',
     email: 'info.moz@hlmic.com',
+    cta: 'Enviar e-mail',
     identity: [
       'HLC Energias Renováveis e Infraestruturas, LDA',
       'Em Consórcio com Construction Corporation No. 1 – JSC (CC1)',
       'Sector da Energia e Infra-Estruturas',
       'República de Moçambique',
     ],
+    form: {
+      heading: 'Tem alguma',
+      headingAccent: 'questão?',
+      intro:
+        'Preencha o formulário ou contacte-nos através dos dados indicados.',
+      name: 'Nome',
+      namePlaceholder: 'Introduza o nome',
+      email: 'E-mail',
+      emailPlaceholder: 'Introduza o e-mail',
+      phone: 'Telefone',
+      phonePlaceholder: 'Introduza o telefone (opcional)',
+      company: 'Empresa',
+      companyPlaceholder: 'Introduza o nome da empresa',
+      message: 'Mensagem',
+      messagePlaceholder: 'Introduza a mensagem',
+      submit: 'Enviar',
+    },
   },
   footer: {
+    tagline: 'Sector da Energia e Infra-Estruturas',
+    navTitle: 'Navegação',
+    areasTitle: 'Áreas de interesse',
+    contactTitle: 'Contactos',
+    contactCta: 'Fale connosco',
+    backToTop: 'Voltar ao topo',
     copyright:
       '© 2026 HLC Energias Renováveis e Infraestruturas, LDA. Todos os direitos reservados.',
   },
@@ -135,6 +160,7 @@ const pt: SiteContent = {
     switchTo: 'English',
     menu: 'Menu',
     close: 'Fechar',
+    contact: 'Contactos',
   },
 }
 
@@ -245,19 +271,43 @@ const en: SiteContent = {
   contact: {
     label: 'Contact',
     heading: 'Contact',
+    infoTitle: 'Contact information',
     addressLabel: 'Address',
     address:
       'Mozambique, Maputo City, Kamavota District, Costa do Sol Neighbourhood, Rua de Micaia, Quarter No. 56, No. 115',
     emailLabel: 'Email',
     email: 'info.moz@hlmic.com',
+    cta: 'Send email',
     identity: [
       'HLC Renewable Energies and Infrastructures, LDA',
       'In Consortium with Construction Corporation No. 1 – JSC (CC1)',
       'Energy and Infrastructure Sector',
       'Republic of Mozambique',
     ],
+    form: {
+      heading: 'Do you have',
+      headingAccent: 'any questions?',
+      intro: 'Fill out the form or contact us using the details provided.',
+      name: 'Name',
+      namePlaceholder: 'Enter name',
+      email: 'Email',
+      emailPlaceholder: 'Enter email',
+      phone: 'Phone',
+      phonePlaceholder: 'Enter phone (optional)',
+      company: 'Company',
+      companyPlaceholder: 'Enter company name',
+      message: 'Message',
+      messagePlaceholder: 'Enter message',
+      submit: 'Submit',
+    },
   },
   footer: {
+    tagline: 'Energy and Infrastructure Sector',
+    navTitle: 'Navigation',
+    areasTitle: 'Areas of interest',
+    contactTitle: 'Contact',
+    contactCta: 'Get in touch',
+    backToTop: 'Back to top',
     copyright:
       '© 2026 HLC Renewable Energies and Infrastructures, LDA. All rights reserved.',
   },
@@ -266,6 +316,7 @@ const en: SiteContent = {
     switchTo: 'Português',
     menu: 'Menu',
     close: 'Close',
+    contact: 'Contact',
   },
 }
 

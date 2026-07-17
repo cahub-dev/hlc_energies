@@ -63,7 +63,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         </a>
         <Nav locale={locale} nav={c.nav} ui={c.ui} />
         <main id="main">{children}</main>
-        <Footer contact={c.contact} footer={c.footer} />
+        <Footer locale={locale} />
         <TanStackDevtools
           config={{ position: 'bottom-right' }}
           plugins={[

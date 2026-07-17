@@ -20,31 +20,36 @@ export default function HomePage({ locale }: { locale: Locale }) {
             src="https://www.youtube.com/embed/_-fTGrX1888?autoplay=1&mute=1&loop=1&playlist=_-fTGrX1888&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             allow="autoplay; encrypted-media"
-            title="Hero Background Video"
+            title={locale === 'pt' ? 'Vídeo de fundo' : 'Background video'}
             tabIndex={-1}
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
 
-        <div className="page-wrap relative z-10 w-full flex flex-col md:flex-row md:items-end justify-between gap-12 rise-in pt-32">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl font-normal leading-[1.1] !text-white sm:text-6xl lg:text-7xl drop-shadow-sm">
-              Experience <br /> Delivers Solutions
+        <div className="page-wrap relative z-10 w-full rise-in pt-32">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-medium uppercase tracking-widest text-hlc-gold-300 drop-shadow-sm">
+              {c.hero.title}
+            </p>
+            <h1 className="text-4xl font-normal leading-[1.1] !text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
+              {c.hero.tagline}
             </h1>
-          </div>
-
-          <div className="flex gap-8 md:gap-12">
-            <div>
-              <p className="text-4xl sm:text-5xl font-normal text-white drop-shadow-sm">47+</p>
-              <p className="mt-2 text-sm text-white">Years of experience</p>
-            </div>
-            <div>
-              <p className="text-4xl sm:text-5xl font-normal text-white drop-shadow-sm">120+</p>
-              <p className="mt-2 text-sm text-white">Experts</p>
-            </div>
-            <div>
-              <p className="text-4xl sm:text-5xl font-normal text-white drop-shadow-sm">138</p>
-              <p className="mt-2 text-sm text-white">Completed project</p>
+            <p className="mt-6 max-w-2xl text-lg text-white/90 leading-relaxed drop-shadow-sm">
+              {c.hero.body[0]}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href={c.hero.primary.to}
+                className="inline-flex items-center gap-2 rounded bg-white px-6 py-3 text-sm font-semibold text-hlc-blue-900 shadow-sm transition-colors hover:bg-white/90"
+              >
+                {c.hero.primary.label} <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a
+                href={c.hero.secondary.to}
+                className="inline-flex items-center gap-2 rounded border border-white/60 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-hlc-blue-900"
+              >
+                {c.hero.secondary.label}
+              </a>
             </div>
           </div>
         </div>
@@ -77,7 +82,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
-              alt="Evostel industrial automation"
+              alt={c.hero.tagline}
               className="w-full h-auto rounded-xl object-cover shadow-sm aspect-[4/3] lg:aspect-[1.4/1]"
             />
           </div>
@@ -191,8 +196,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
             {/* Left Sidebar: Contact Information */}
             <div className="w-full lg:w-[35%] xl:w-1/3">
               <div className="bg-[#f5f5f5] rounded-xl p-8 lg:p-10 flex flex-col h-full shadow-sm">
-                <h3 className="text-[1.35rem] font-medium text-gray-900 mb-8">Contact information</h3>
-                
+                <h3 className="text-[1.35rem] font-medium text-gray-900 mb-8">{c.contact.infoTitle}</h3>
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-xs text-gray-500 mb-1">{c.contact.emailLabel}</h4>
@@ -202,25 +207,33 @@ export default function HomePage({ locale }: { locale: Locale }) {
                       </a>
                     </p>
                   </div>
-                  
+
                   <div className="pt-4">
-                    <h4 className="text-[1.15rem] font-medium text-gray-900 mb-4">Main Office:</h4>
                     <h4 className="text-xs text-gray-500 mb-1">{c.contact.addressLabel}</h4>
                     <p className="text-gray-900 text-sm leading-relaxed max-w-[280px]">
                       {c.contact.address}
                     </p>
                   </div>
-                  
-                  <div>
-                    <h4 className="text-xs text-gray-500 mb-1">Office Hours</h4>
-                    <p className="text-gray-900 text-sm">Sunday- Thursday, 8:00 AM - 6:00 PM</p>
+
+                  <div className="pt-4 border-t border-gray-200 space-y-1">
+                    {c.contact.identity.map((line, i) => (
+                      <p
+                        key={i}
+                        className={`text-sm leading-relaxed ${i === 0 ? 'font-medium text-gray-900' : 'text-gray-600'}`}
+                      >
+                        {line}
+                      </p>
+                    ))}
                   </div>
                 </div>
 
                 <div className="mt-12">
-                  <button className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-6 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2">
-                    Contact us <span aria-hidden="true">&rarr;</span>
-                  </button>
+                  <a
+                    href={`mailto:${c.contact.email}`}
+                    className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-6 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2"
+                  >
+                    {c.contact.cta} <span aria-hidden="true">&rarr;</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -232,41 +245,41 @@ export default function HomePage({ locale }: { locale: Locale }) {
                   &bull; {c.contact.label}
                 </span>
                 <h2 className="text-4xl lg:text-[3rem] font-medium text-gray-900 leading-[1.1] mb-3">
-                  Do you have <span className="text-hlc-gold-600">any</span><br/>
-                  <span className="text-hlc-gold-600">questions?</span>
+                  {c.contact.form.heading}{' '}
+                  <span className="text-hlc-gold-600">{c.contact.form.headingAccent}</span>
                 </h2>
                 <p className="text-[0.95rem] text-gray-600">
-                  Please fill out the form or contact us using the contact details
+                  {c.contact.form.intro}
                 </p>
               </div>
 
               <form className="bg-[#fafafa] rounded-xl p-8 lg:p-10" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">Name</label>
-                    <input type="text" id="name" placeholder="Enter name" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.name}</label>
+                    <input type="text" id="name" placeholder={c.contact.form.namePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">Your Email</label>
-                    <input type="email" id="email" placeholder="Enter Email" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.email}</label>
+                    <input type="email" id="email" placeholder={c.contact.form.emailPlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">Your Phone</label>
-                    <input type="tel" id="phone" placeholder="Enter phone (optional)" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.phone}</label>
+                    <input type="tel" id="phone" placeholder={c.contact.form.phonePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">Company</label>
-                    <input type="text" id="company" placeholder="Enter Company Name" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.company}</label>
+                    <input type="text" id="company" placeholder={c.contact.form.companyPlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
                   </div>
                 </div>
 
                 <div className="mb-10">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">Message</label>
-                  <textarea id="message" rows={1} placeholder="Enter Message" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400 resize-none h-[40px]"></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.message}</label>
+                  <textarea id="message" rows={1} placeholder={c.contact.form.messagePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400 resize-none h-[40px]"></textarea>
                 </div>
 
                 <button type="submit" className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-8 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2">
-                  Submit <span aria-hidden="true">&rarr;</span>
+                  {c.contact.form.submit} <span aria-hidden="true">&rarr;</span>
                 </button>
               </form>
             </div>
