@@ -10,6 +10,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { content } from '@/content/site'
 import { localeFromPath } from '@/lib/i18n'
 import { jsonLd } from '@/lib/seo'
@@ -67,6 +68,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           <main id="main">{children}</main>
           <Footer locale={locale} />
         </SmoothScroll>
+        <LanguageSwitcher locale={locale} />
         <TanStackDevtools
           config={{ position: 'bottom-right' }}
           plugins={[
