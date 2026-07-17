@@ -106,9 +106,9 @@ const pt: SiteContent = {
   },
   projects: {
     label: 'Projectos de referência',
-    heading: 'Experiência técnica de referência da CC1',
+    heading: 'Experiência técnica comprovada',
     intro:
-      'Projectos de energia e infra-estruturas de grande escala executados pela Construction Corporation No. 1 – JSC (CC1), parceiro técnico do Consórcio HLC–CC1.',
+      'Projectos de energia e infra-estruturas de grande escala executados pelo nosso parceiro técnico, a Construction Corporation No. 1 – JSC (CC1).',
     cta: { label: 'Ver projectos de referência', to: '#projectos' },
   },
   contact: {
@@ -263,9 +263,9 @@ const en: SiteContent = {
   },
   projects: {
     label: 'Reference projects',
-    heading: 'CC1 technical reference experience',
+    heading: 'Proven technical experience',
     intro:
-      'Large-scale energy and infrastructure projects executed by Construction Corporation No. 1 – JSC (CC1), technical partner of the HLC–CC1 Consortium.',
+      'Large-scale energy and infrastructure projects executed by our technical partner, Construction Corporation No. 1 – JSC (CC1).',
     cta: { label: 'View reference projects', to: '#projectos' },
   },
   contact: {
