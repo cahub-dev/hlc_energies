@@ -3,6 +3,7 @@ import { referenceProjects } from '@/content/projects'
 import ProjectsShowcase from './ProjectsShowcase'
 import InteractiveAreas from './InteractiveAreas'
 import CommitmentCarousel from './CommitmentCarousel'
+import Reveal from './Reveal'
 import type { Locale } from '@/content/types'
 
 export default function HomePage({ locale }: { locale: Locale }) {
@@ -57,7 +58,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
 
       {/* About */}
       <section id="sobre" className="py-24">
-        <div className="page-wrap grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <Reveal stagger className="page-wrap grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="max-w-xl">
             <h2 className="text-3xl font-bold sm:text-4xl text-gray-900 mb-6">
               {c.about.heading}
@@ -86,11 +87,11 @@ export default function HomePage({ locale }: { locale: Locale }) {
               className="w-full h-auto rounded-xl object-cover shadow-sm aspect-[4/3] lg:aspect-[1.4/1]"
             />
           </div>
-        </div>
+        </Reveal>
 
         {/* Expanded About: Consortium, Technical Capacity & Financials */}
         <div className="page-wrap mt-24 pt-16 border-t border-gray-100">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-24 mb-16">
+          <Reveal stagger className="grid gap-12 lg:grid-cols-2 lg:gap-24 mb-16">
             {/* Consórcio */}
             <div className="flex flex-col">
               <h3 className="text-2xl font-medium text-gray-900 mb-6">
@@ -112,7 +113,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 {c.projects.intro}
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -120,7 +121,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       {/* Areas of interest */}
       <section id="areas" className="py-24 bg-gray-50">
         <div className="page-wrap">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <Reveal className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
               &bull; {c.areas.label}
             </span>
@@ -130,9 +131,11 @@ export default function HomePage({ locale }: { locale: Locale }) {
             <p className="text-lg text-[var(--ink-muted)]">
               {c.areas.intro}
             </p>
-          </div>
-          
-          <InteractiveAreas areas={c.areas} />
+          </Reveal>
+
+          <Reveal>
+            <InteractiveAreas areas={c.areas} />
+          </Reveal>
           
           <div className="text-center mt-12 max-w-3xl mx-auto">
             <p className="text-[var(--ink-muted)]">
@@ -145,7 +148,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       {/* Commitment */}
       <section id="compromisso" className="py-24">
         <div className="page-wrap">
-          <div className="text-center max-w-3xl mx-auto">
+          <Reveal className="text-center max-w-3xl mx-auto">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
               &bull; {c.commitment.label}
             </span>
@@ -155,16 +158,18 @@ export default function HomePage({ locale }: { locale: Locale }) {
             <p className="text-lg text-[var(--ink-muted)]">
               {c.commitment.intro}
             </p>
-          </div>
+          </Reveal>
         </div>
-        
-        <CommitmentCarousel pillars={c.commitment.pillars} notes={c.commitment.notes} locale={locale} />
+
+        <Reveal>
+          <CommitmentCarousel pillars={c.commitment.pillars} notes={c.commitment.notes} locale={locale} />
+        </Reveal>
       </section>
 
       {/* Reference projects */}
       <section id="projectos" className="bg-gray-50 py-24 border-t border-gray-100">
         <div className="page-wrap">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <Reveal className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
               &bull; {c.projects.label}
             </span>
@@ -174,8 +179,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
             <p className="text-lg text-[var(--ink-muted)] font-light leading-relaxed">
               {c.projects.intro}
             </p>
-          </div>
-          
+          </Reveal>
+
           <ProjectsShowcase projects={referenceProjects} locale={locale} />
         </div>
       </section>
@@ -183,8 +188,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
       {/* Contact */}
       <section id="contactos" className="bg-white py-24">
         <div className="page-wrap">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-            
+          <Reveal stagger className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+
             {/* Left Sidebar: Contact Information */}
             <div className="w-full lg:w-[35%] xl:w-1/3">
               <div className="bg-[#f5f5f5] rounded-xl p-8 lg:p-10 flex flex-col h-full shadow-sm">
@@ -275,7 +280,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 </button>
               </form>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

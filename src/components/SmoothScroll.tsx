@@ -1,7 +1,17 @@
 'use client'
 
-import { ReactLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from 'lenis/react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { ReactNode } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+/** Keeps ScrollTrigger in sync with Lenis' smooth scroll position. */
+function ScrollTriggerBridge() {
+  useLenis(() => ScrollTrigger.update())
+  return null
+}
 
 /**
  * Global smooth scrolling (Lenis) on the window. `anchors` gives in-page hash
@@ -18,6 +28,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         anchors: { offset: -96 },
       }}
     >
+      <ScrollTriggerBridge />
       {children}
     </ReactLenis>
   )
