@@ -103,6 +103,18 @@ export function jsonLd(locale: Locale): string {
         inLanguage: locale === 'pt' ? 'pt-MZ' : 'en',
         publisher: { '@id': `${SITE_URL}/#organization` },
       },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${localeUrl(locale)}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: c.nav[0]?.label ?? (locale === 'pt' ? 'Início' : 'Home'),
+            item: localeUrl(locale),
+          },
+        ],
+      },
     ],
   }
   return JSON.stringify(graph)
