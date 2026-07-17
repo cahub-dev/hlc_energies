@@ -9,11 +9,15 @@ import type { Locale } from '@/content/types'
 
 const env = import.meta.env as Record<string, string | undefined>
 
-/** Absolute site origin, no trailing slash. Used for canonical/hreflang/OG. */
-export const SITE_URL = (env.VITE_SITE_URL ?? 'https://hlcenergies.com').replace(
-  /\/+$/,
-  '',
-)
+/**
+ * Absolute site origin, no trailing slash. Used for canonical/hreflang/OG.
+ * Default matches the primary serving domain (apex 308-redirects to www);
+ * OG/canonical URLs must resolve 200 without a redirect or scrapers (WhatsApp)
+ * drop the image. Set VITE_SITE_URL in Vercel to override.
+ */
+export const SITE_URL = (
+  env.VITE_SITE_URL ?? 'https://www.hlcenergies.com'
+).replace(/\/+$/, '')
 
 /** Emit noindex on staging (set VITE_NOINDEX=true). Production stays indexable. */
 const NOINDEX = env.VITE_NOINDEX === 'true'
@@ -142,6 +146,7 @@ export function buildSeo({ locale }: { locale: Locale }) {
       { property: 'og:locale', content: OG_LOCALE[locale] },
       { property: 'og:locale:alternate', content: OG_LOCALE[other] },
       { property: 'og:image', content: ogImage },
+      { property: 'og:image:type', content: 'image/jpeg' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:image:alt', content: c.hero.tagline },
