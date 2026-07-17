@@ -65,10 +65,15 @@ body {
   }
 }
 
-:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-  border-radius: 2px;
+@layer base {
+  /* Global keyboard-focus ring for links, buttons, etc. In @layer base so
+     components that opt out with `focus:outline-none` (e.g. the underline-only
+     form inputs, which show a highlighted bottom border instead) can win. */
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 /* Layout */

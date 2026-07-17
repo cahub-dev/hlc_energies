@@ -27,7 +27,13 @@ export default function Footer({ locale }: { locale: Locale }) {
           {/* Column 1: Identity */}
           <div className="w-full lg:w-1/3 space-y-6">
             <div>
-              <h2 className="text-[1.35rem] font-bold tracking-widest mb-1 uppercase">HLC Energies</h2>
+              <img
+                src="/logo-hlc-white.svg"
+                alt="HLC Energies"
+                className="h-10 w-auto mb-3"
+                width={142}
+                height={40}
+              />
               <p className="text-[0.7rem] text-white/80 uppercase tracking-widest">{c.footer.tagline}</p>
             </div>
             <div className="space-y-1 text-[0.8rem] text-white/85 leading-relaxed">
