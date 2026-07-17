@@ -38,9 +38,9 @@ export default function CommitmentCarousel({
   const [progress, setProgress] = useState(0)
 
   const images = [
-    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1610028290816-5d937a395a49?auto=format&fit=crop&q=80&w=800",
+    "/local-employment.png",
+    "/local-suppliers.jpg",
+    "/conformidade-legal.jpg",
     "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800"
   ]
 
@@ -173,7 +173,7 @@ export default function CommitmentCarousel({
             <article
               key={i}
               data-card
-              className={`flex-none min-h-[400px] rounded-2xl overflow-hidden flex flex-col ${
+              className={`relative flex-none min-h-[400px] rounded-2xl overflow-hidden flex flex-col ${
                 item.type === 'text' 
                   ? `w-[300px] sm:w-[360px] lg:w-[400px] ${cardStyles[item.colorIdx % cardStyles.length]}`
                   : `w-[400px] sm:w-[500px] lg:w-[650px] bg-gray-100`
@@ -192,7 +192,7 @@ export default function CommitmentCarousel({
                   </div>
                 </div>
               ) : (
-                <img src={item.src} alt="" className="w-full h-full object-cover pointer-events-none" />
+                <img src={item.src} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
               )}
             </article>
           ))}

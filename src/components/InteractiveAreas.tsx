@@ -3,8 +3,8 @@
 import { useState } from 'react'
 
 const areaImages = [
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000", // Generic industrial
-  "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=1000", // Substations
+  "/centrais-electriccas-epc.jpg", // Centrais eléctricas EPC
+  "/linhas-de-transport-e-distribuicao.jpg", // Linhas de transporte e distribuição
   "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1000", // Rural electrification
   "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1000", // Solar IPP
   "https://images.unsplash.com/photo-1610028290816-5d937a395a49?auto=format&fit=crop&q=80&w=1000", // Transmission lines
