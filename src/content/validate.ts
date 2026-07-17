@@ -16,6 +16,9 @@ export function assertValidProjects(projects: ReferenceProject[]): void {
     if (p.entity !== 'CC1') {
       errors.push(`Project "${p.slug}": entity must be "CC1", got "${p.entity}".`)
     }
+    if (!Array.isArray(p.images) || p.images.length === 0) {
+      errors.push(`Project "${p.slug}": at least one image is required.`)
+    }
     for (const locale of LOCALES) {
       const attribution = p.attribution?.[locale]?.trim()
       const sourceLabel = p.sourceLabel?.[locale]?.trim()

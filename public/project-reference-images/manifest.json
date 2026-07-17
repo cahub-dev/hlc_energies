@@ -1,0 +1,193 @@
+[
+  {
+    "project": "Dakr Tih Hydropower Plants",
+    "folder": "01_dakr-tih-hydropower-plants",
+    "file": "dakr-tih-01.jpg",
+    "dimensions": [
+      998,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 5,
+    "crop_box_on_2480x3507_page": [
+      186,
+      764,
+      1184,
+      1498
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Dakr Tih Hydropower Plants",
+    "folder": "01_dakr-tih-hydropower-plants",
+    "file": "dakr-tih-02.jpg",
+    "dimensions": [
+      992,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 5,
+    "crop_box_on_2480x3507_page": [
+      1294,
+      764,
+      2286,
+      1498
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Han Kiem 2 Wind Power Plant",
+    "folder": "02_han-kiem-2-wind-power-plant",
+    "file": "han-kiem-2-01.jpg",
+    "dimensions": [
+      998,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 5,
+    "crop_box_on_2480x3507_page": [
+      186,
+      1864,
+      1184,
+      2598
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Han Kiem 2 Wind Power Plant",
+    "folder": "02_han-kiem-2-wind-power-plant",
+    "file": "han-kiem-2-02.jpg",
+    "dimensions": [
+      992,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 5,
+    "crop_box_on_2480x3507_page": [
+      1294,
+      1864,
+      2286,
+      2598
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Tay Ninh TTC1 & TTC2 Solar Power Plants",
+    "folder": "03_tay-ninh-ttc1-ttc2-solar-power-plants",
+    "file": "tay-ninh-ttc1-ttc2-01.jpg",
+    "dimensions": [
+      992,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 6,
+    "crop_box_on_2480x3507_page": [
+      183,
+      764,
+      1175,
+      1498
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Tay Ninh TTC1 & TTC2 Solar Power Plants",
+    "folder": "03_tay-ninh-ttc1-ttc2-solar-power-plants",
+    "file": "tay-ninh-ttc1-ttc2-02.jpg",
+    "dimensions": [
+      996,
+      734
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 6,
+    "crop_box_on_2480x3507_page": [
+      1288,
+      764,
+      2284,
+      1498
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Nghi Son 2 Thermal Power Plant",
+    "folder": "04_nghi-son-2-thermal-power-plant",
+    "file": "nghi-son-2-01.jpg",
+    "dimensions": [
+      992,
+      737
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 6,
+    "crop_box_on_2480x3507_page": [
+      183,
+      1861,
+      1175,
+      2598
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Nghi Son 2 Thermal Power Plant",
+    "folder": "04_nghi-son-2-thermal-power-plant",
+    "file": "nghi-son-2-02.jpg",
+    "dimensions": [
+      996,
+      737
+    ],
+    "source": "/Users/user/Downloads/Company Profile.pdf",
+    "source_page": 6,
+    "crop_box_on_2480x3507_page": [
+      1288,
+      1861,
+      2284,
+      2598
+    ],
+    "entity": "CC1",
+    "usage_status": "Internal working asset; obtain CC1/HLC publication approval before public use."
+  },
+  {
+    "project": "Vinh Tan 4 Thermal Power Plant",
+    "folder": "05_vinh-tan-4-thermal-power-plant",
+    "file": "vinh-tan-4-01.jpg",
+    "dimensions": [
+      585,
+      360
+    ],
+    "source_page": "https://www.cc1.vn/en/project/nha-may-nhiet-dien-vinh-tan-4",
+    "source_image_url": "https://www.cc1.vn/wp-content/uploads/2022/05/NHIET-DIEN-VINH-TAN-4_DJI_0662-1-585x360.jpg",
+    "entity": "CC1",
+    "usage_status": "Downloaded from CC1 website for internal working use; obtain CC1 permission before public use."
+  },
+  {
+    "project": "Vinh Tan 4 Thermal Power Plant",
+    "folder": "05_vinh-tan-4-thermal-power-plant",
+    "file": "vinh-tan-4-02.jpg",
+    "dimensions": [
+      585,
+      360
+    ],
+    "source_page": "https://www.cc1.vn/en/project/nha-may-nhiet-dien-vinh-tan-4",
+    "source_image_url": "https://www.cc1.vn/wp-content/uploads/2022/05/NHIET-DIEN-VINH-TAN-4_DJI_0677-Pano-1-585x360.jpg",
+    "entity": "CC1",
+    "usage_status": "Downloaded from CC1 website for internal working use; obtain CC1 permission before public use."
+  },
+  {
+    "project": "Vinh Tan 4 Thermal Power Plant",
+    "folder": "05_vinh-tan-4-thermal-power-plant",
+    "file": "vinh-tan-4-03.jpg",
+    "dimensions": [
+      585,
+      360
+    ],
+    "source_page": "https://www.cc1.vn/en/project/nha-may-nhiet-dien-vinh-tan-4",
+    "source_image_url": "https://www.cc1.vn/wp-content/uploads/2022/05/NHIET-DIEN-VINH-TAN-4_DJI_0650-Pano-1-585x360.jpg",
+    "entity": "CC1",
+    "usage_status": "Downloaded from CC1 website for internal working use; obtain CC1 permission before public use."
+  }
+]

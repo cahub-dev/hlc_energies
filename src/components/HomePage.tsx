@@ -1,6 +1,6 @@
 import { content } from '@/content/site'
 import { referenceProjects } from '@/content/projects'
-import ProjectCard from './ProjectCard'
+import ProjectsShowcase from './ProjectsShowcase'
 import InteractiveAreas from './InteractiveAreas'
 import CommitmentCarousel from './CommitmentCarousel'
 import type { Locale } from '@/content/types'
@@ -176,15 +176,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
             </p>
           </div>
           
-          <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-            {referenceProjects.map((project) => (
-              <ProjectCard
-                key={project.slug}
-                project={project}
-                locale={locale}
-              />
-            ))}
-          </div>
+          <ProjectsShowcase projects={referenceProjects} locale={locale} />
         </div>
       </section>
 

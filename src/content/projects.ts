@@ -32,7 +32,10 @@ export const referenceProjects: ReferenceProject[] = [
     },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800',
+    images: [
+      '/project-reference-images/01_dakr-tih-hydropower-plants/dakr-tih-01.jpg',
+      '/project-reference-images/01_dakr-tih-hydropower-plants/dakr-tih-02.jpg',
+    ],
   },
   {
     slug: 'han-kiem-2',
@@ -42,7 +45,10 @@ export const referenceProjects: ReferenceProject[] = [
     capacity: { pt: 'Capacidade de 15 MW, 6 turbinas', en: '15 MW capacity, 6 turbines' },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
-    image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=800',
+    images: [
+      '/project-reference-images/02_han-kiem-2-wind-power-plant/han-kiem-2-01.jpg',
+      '/project-reference-images/02_han-kiem-2-wind-power-plant/han-kiem-2-02.jpg',
+    ],
   },
   {
     slug: 'tay-ninh-ttc',
@@ -58,7 +64,12 @@ export const referenceProjects: ReferenceProject[] = [
     },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
-    image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800',
+    images: [
+      '/project-reference-images/03_tay-ninh-ttc1-ttc2-solar-power-plants/tay-ninh-ttc1-ttc2-01.jpg',
+      '/project-reference-images/03_tay-ninh-ttc1-ttc2-solar-power-plants/tay-ninh-ttc1-ttc2-02.jpg',
+      '/project-reference-images/03_tay-ninh-ttc1-ttc2-solar-power-plants/tay-ninh-ttc1-ttc2-03.jpg',
+      '/project-reference-images/03_tay-ninh-ttc1-ttc2-solar-power-plants/tay-ninh-ttc1-ttc2-04.jpg',
+    ],
   },
   {
     slug: 'nghi-son-2',
@@ -68,7 +79,11 @@ export const referenceProjects: ReferenceProject[] = [
     // COPY.md: profile provides no capacity; must not be invented.
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
-    image: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800',
+    images: [
+      '/project-reference-images/04_nghi-son-2-thermal-power-plant/nghi-son-2-03.jpg',
+      '/project-reference-images/04_nghi-son-2-thermal-power-plant/nghi-son-2-04.jpg',
+      '/project-reference-images/04_nghi-son-2-thermal-power-plant/nghi-son-2-02.jpg',
+    ],
   },
   {
     slug: 'vinh-tan-4',
@@ -89,7 +104,11 @@ export const referenceProjects: ReferenceProject[] = [
       en: 'Source: CC1 website',
     },
     sourceUrl: 'https://www.cc1.vn/en/project/nha-may-nhiet-dien-vinh-tan-4',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800',
+    images: [
+      '/project-reference-images/05_vinh-tan-4-thermal-power-plant/vinh-tan-4-01.jpg',
+      '/project-reference-images/05_vinh-tan-4-thermal-power-plant/vinh-tan-4-02.jpg',
+      '/project-reference-images/05_vinh-tan-4-thermal-power-plant/vinh-tan-4-03.jpg',
+    ],
   },
 ]
 

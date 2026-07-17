@@ -1,11 +1,20 @@
+'use client'
+
+import { useRef } from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
 import type { Locale, ReferenceProject } from '@/content/types'
+
+gsap.registerPlugin(useGSAP)
 
 export default function ProjectCard({
   project,
   locale,
+  onOpen,
 }: {
   project: ReferenceProject
   locale: Locale
+  onOpen: () => void
 }) {
   const facts: { label: string; value: string }[] = []
   if (project.executionPeriod) {
@@ -27,14 +36,53 @@ export default function ProjectCard({
     })
   }
 
+  const cover = project.images[0]
+
+  const rootRef = useRef<HTMLButtonElement>(null)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  // Ken Burns: slowly pan/zoom the single cover so the parts cropped by
+  // object-cover drift into view — a subtle, video-like movement. GSAP owns
+  // the transform, so no CSS hover-scale here (it would fight the tween).
+  useGSAP(
+    () => {
+      const img = imgRef.current
+      if (!img) return
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+      gsap.fromTo(
+        img,
+        { scale: 1.14, xPercent: -4, yPercent: -2 },
+        {
+          scale: 1.14,
+          xPercent: 4,
+          yPercent: 2,
+          duration: 12,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true,
+        },
+      )
+    },
+    { scope: rootRef },
+  )
+
+  const galleryLabel = locale === 'pt' ? 'Ver galeria' : 'View gallery'
+
   return (
-    <article className="group relative flex flex-col h-[400px] lg:h-[450px] w-full rounded-2xl overflow-hidden bg-gray-900 cursor-default">
-      {/* Background Image */}
-      {project.image && (
-        <img 
-          src={project.image} 
-          alt={project.name[locale]} 
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+    <button
+      type="button"
+      onClick={onOpen}
+      aria-label={`${project.name[locale]} — ${galleryLabel}`}
+      className="group relative flex flex-col h-[400px] lg:h-[450px] w-full rounded-2xl overflow-hidden bg-gray-900 text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-hlc-gold-500 focus-visible:ring-offset-2"
+    >
+      {/* Cover image with a slow Ken Burns pan */}
+      {cover && (
+        <img
+          ref={imgRef}
+          src={cover}
+          alt={project.name[locale]}
+          className="absolute inset-0 h-full w-full object-cover will-change-transform"
         />
       )}
 
@@ -44,9 +92,13 @@ export default function ProjectCard({
       {/* Hover Overlay (Dark brand color fading in on hover) */}
       <div className="absolute inset-0 bg-hlc-blue-900/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-      {/* CC1 Badge */}
-      <span className="absolute top-6 left-6 z-10 rounded-full bg-white/90 backdrop-blur-sm px-3 py-1 text-[0.75rem] font-bold tracking-wider text-hlc-blue-800 shadow-sm transition-all duration-500 group-hover:bg-white group-hover:text-hlc-blue-900">
-        CC1
+      {/* Gallery affordance (image count) */}
+      <span className="absolute top-6 right-6 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/40 backdrop-blur-sm px-2.5 py-1 text-[0.7rem] font-medium text-white shadow-sm">
+        <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" />
+          <path d="M3 14l4-4 3 3 5-5 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        {project.images.length}
       </span>
 
       {/* Content Container */}
@@ -74,10 +126,13 @@ export default function ProjectCard({
                   ))}
                 </dl>
               )}
+              <span className="mt-4 inline-flex items-center gap-2 text-[0.8rem] font-medium text-hlc-gold-300">
+                {galleryLabel} <span aria-hidden="true">&rarr;</span>
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </article>
+    </button>
   )
 }

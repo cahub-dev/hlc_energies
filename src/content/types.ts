@@ -102,5 +102,6 @@ export type ReferenceProject = {
   executionPeriod?: string
   capacity?: Localized<string>
   sourceUrl?: string
-  image?: string
+  /** Local image paths served from public/, first is the card cover. */
+  images: string[]
 }

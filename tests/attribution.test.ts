@@ -12,6 +12,7 @@ const base: ReferenceProject = {
     en: 'Executed by CC1 — technical partner of the HLC–CC1 Consortium.',
   },
   sourceLabel: { pt: 'Fonte', en: 'Source' },
+  images: ['/project-reference-images/sample/sample-01.jpg'],
 }
 
 test('approved reference projects all validate', () => {
@@ -37,4 +38,9 @@ test('rejects attribution that omits CC1', () => {
     attribution: { pt: 'Executado pelo Consórcio.', en: 'Executed by the Consortium.' },
   }
   expect(() => assertValidProjects([bad])).toThrow(/must name CC1/)
+})
+
+test('rejects a project with no images', () => {
+  const bad: ReferenceProject = { ...base, images: [] }
+  expect(() => assertValidProjects([bad])).toThrow(/at least one image/)
 })
