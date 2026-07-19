@@ -40,13 +40,6 @@ export type SiteContent = {
       pillars: { title: string; body: string }[]
       note: { title: string; body: string }
     }
-    partners: {
-      heading: string
-      intro: string
-      statValue: string
-      statLabel: string
-      names: string[]
-    }
   }
   legal: { heading: string; lines: string[] }
   areas: {

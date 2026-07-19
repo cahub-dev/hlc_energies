@@ -103,18 +103,6 @@ const pt: SiteContent = {
         body: 'Formação em serviço de técnicos moçambicanos integrados nas equipas de obra, com metas de progressiva moçambicanização dos quadros técnicos e de gestão.',
       },
     },
-    partners: {
-      heading: 'Clientes e parceiros internacionais da CC1',
-      intro:
-        'A CC1 acumula décadas de colaboração com os maiores grupos de engenharia e construção da Ásia e do mundo. No mercado interno vietnamita, executa obras para a companhia eléctrica nacional e para a companhia nacional de petróleo e gás.',
-      statValue: '13+',
-      statLabel: 'Parceiros internacionais',
-      names: [
-        'Doosan', 'JGC', 'Kajima', 'Maeda', 'Marubeni', 'Obayashi', 'Shimizu',
-        'Sumitomo', 'SK', 'Taisei', 'Tokyu', 'TOA', 'Hyundai E&C', 'Daewoo E&C',
-        'WHA Group', 'Samsung Engineering', 'VSIP', 'Mitsubishi', 'Sembcorp',
-      ],
-    },
   },
   legal: {
     heading: 'Informação legal',
@@ -353,18 +341,6 @@ const en: SiteContent = {
         title: 'Localisation of Mozambican personnel',
         body: 'On-the-job training of Mozambican technicians embedded in site teams, with targets for the progressive localisation of technical and management staff.',
       },
-    },
-    partners: {
-      heading: "CC1's international clients and partners",
-      intro:
-        'CC1 has decades of collaboration with the largest engineering and construction groups in Asia and worldwide. In its home Vietnamese market, it delivers works for the national power utility and the national oil and gas company.',
-      statValue: '13+',
-      statLabel: 'International partners',
-      names: [
-        'Doosan', 'JGC', 'Kajima', 'Maeda', 'Marubeni', 'Obayashi', 'Shimizu',
-        'Sumitomo', 'SK', 'Taisei', 'Tokyu', 'TOA', 'Hyundai E&C', 'Daewoo E&C',
-        'WHA Group', 'Samsung Engineering', 'VSIP', 'Mitsubishi', 'Sembcorp',
-      ],
     },
   },
   legal: {

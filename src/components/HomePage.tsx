@@ -204,35 +204,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
             </Reveal>
           </div>
 
-          {/* CC1 international partners */}
-          <div className="mt-16">
-            <Reveal className="max-w-3xl mb-8">
-              <h3 className="text-2xl font-medium text-gray-900 mb-3">
-                {c.consortium.partners.heading}
-              </h3>
-              <p className="text-[var(--ink-muted)] leading-relaxed">
-                {c.consortium.partners.intro}
-              </p>
-            </Reveal>
-            <Reveal className="flex flex-wrap items-center gap-3">
-              <span className="mr-2 inline-flex items-baseline gap-2 rounded-lg bg-hlc-blue-50 px-4 py-2">
-                <span className="text-2xl font-bold text-hlc-blue-900">
-                  {c.consortium.partners.statValue}
-                </span>
-                <span className="text-sm text-hlc-blue-800">
-                  {c.consortium.partners.statLabel}
-                </span>
-              </span>
-              {c.consortium.partners.names.map((n) => (
-                <span
-                  key={n}
-                  className="rounded-full border border-gray-200 px-3 py-1.5 text-sm text-gray-700"
-                >
-                  {n}
-                </span>
-              ))}
-            </Reveal>
-          </div>
         </div>
       </section>
 

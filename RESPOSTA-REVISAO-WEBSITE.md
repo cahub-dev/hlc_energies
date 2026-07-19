@@ -59,7 +59,6 @@ Resumo dos pontos da revisão (mensagens via Hermes + ficheiro *HLC Website Revi
 
 - ✅ Repartição de funções do Consórcio (HLC local vs CC1 técnico).
 - ✅ Secção **Transferência de capacidade** (+ Moçambicanização dos quadros).
-- ✅ **Parceiros internacionais da CC1** (13+).
 - ✅ **Outras infra-estruturas da CC1** (aeroportos, metro, auto-estrada, refinarias).
 - ✅ Novo projecto de referência: **Phu My CCPP**.
 
