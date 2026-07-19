@@ -1,15 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-
-const areaImages = [
-  "/centrais-electriccas-epc.jpg", // Centrais eléctricas EPC
-  "/linhas-de-transport-e-distribuicao.jpg", // Linhas de transporte e distribuição
-  "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=1000", // Rural electrification
-  "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&q=80&w=1000", // Solar IPP
-  "https://images.unsplash.com/photo-1610028290816-5d937a395a49?auto=format&fit=crop&q=80&w=1000", // Transmission lines
-  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1000", // Civil works
-]
+import { areaImages } from '@/content/media'
 
 export default function InteractiveAreas({ areas }: { areas: any }) {
   const [activeIdx, setActiveIdx] = useState(0)
@@ -19,9 +11,9 @@ export default function InteractiveAreas({ areas }: { areas: any }) {
       {/* Image Side */}
       <div className="relative min-h-[450px] lg:min-h-[520px] w-full rounded-md overflow-hidden">
         {areaImages.map((src, i) => (
-          <img 
-            key={src}
-            src={src} 
+          <img
+            key={i}
+            src={src}
             alt={areas.items[i]?.title || 'Area image'}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${activeIdx === i ? 'opacity-100' : 'opacity-0'}`}
           />

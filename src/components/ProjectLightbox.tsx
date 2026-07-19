@@ -197,6 +197,9 @@ export default function ProjectLightbox({
         {/* Caption + mandatory CC1 attribution */}
         <div className="mt-4 max-w-3xl text-white">
           <h2 className="text-lg font-medium !text-white">{project.name[locale]}</h2>
+          <p className="mt-1 text-[0.8rem] font-medium uppercase tracking-wide text-hlc-gold-300">
+            {project.sector[locale]}
+          </p>
           <p className="mt-1 text-[0.85rem] leading-relaxed text-white/75">
             {project.attribution[locale]}
           </p>

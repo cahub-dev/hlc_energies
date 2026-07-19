@@ -57,7 +57,7 @@ export default function Footer({ locale }: { locale: Locale }) {
             </ul>
           </div>
 
-          {/* Column 3: Areas of interest */}
+          {/* Column 3: Areas of activity */}
           <div className="space-y-6 lg:w-1/4">
             <h3 className="text-[0.9rem] font-medium text-white/90">{c.footer.areasTitle}</h3>
             <ul className="space-y-3">
@@ -90,8 +90,20 @@ export default function Footer({ locale }: { locale: Locale }) {
 
         </div>
 
+        {/* Legal information — for official / institutional visitors */}
+        <div className="mb-8 border-t border-white/15 pt-8">
+          <h3 className="mb-2 text-[0.7rem] font-medium uppercase tracking-widest text-white/60">
+            {c.legal.heading}
+          </h3>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-[0.75rem] text-white/70">
+            {c.legal.lines.map((line, i) => (
+              <span key={i}>{line}</span>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-white/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[0.75rem] text-white/80">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[0.75rem] text-white/80">
           <p>{c.footer.copyright}</p>
           <button onClick={scrollToTop} className="hover:text-white transition-colors flex items-center gap-1.5 font-medium">
             {c.footer.backToTop} <span className="text-[0.85rem]">↑</span>

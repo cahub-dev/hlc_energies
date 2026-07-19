@@ -20,15 +20,17 @@ export const referenceProjects: ReferenceProject[] = [
   {
     slug: 'dakr-tih',
     entity: 'CC1',
-    name: { pt: 'Usinas Hidrelétricas de Dakr Tih', en: 'Dakr Tih Hydropower Plants' },
+    name: { pt: 'Centrais Hidroeléctricas de Dakr Tih', en: 'Dakr Tih Hydropower Plants' },
+    sector: { pt: 'Central hidroeléctrica', en: 'Hydropower' },
     location: {
       pt: 'Província de Gia Nghia, província de Dak Nong',
       en: 'Gia Nghia Province, Dak Nong Province',
     },
-    // COPY.md is explicit: do NOT add a unit after "635 milhões".
+    // Unit "kWh/year" added per Mr. Lam's written review (July 2026), which
+    // supersedes the earlier COPY.md "no unit" note.
     capacity: {
-      pt: 'Capacidade de 144 MW; potência indicada como “635 milhões por ano”',
-      en: '144 MW capacity; output stated as “635 million per year”',
+      pt: 'Capacidade de 144 MW; produção de 635 milhões de kWh/ano',
+      en: '144 MW capacity; 635 million kWh/year output',
     },
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
@@ -40,7 +42,8 @@ export const referenceProjects: ReferenceProject[] = [
   {
     slug: 'han-kiem-2',
     entity: 'CC1',
-    name: { pt: 'Usina Eólica de Han Kiem 2', en: 'Han Kiem 2 Wind Power Plant' },
+    name: { pt: 'Central Eólica de Han Kiem 2', en: 'Han Kiem 2 Wind Power Plant' },
+    sector: { pt: 'Central eólica', en: 'Wind power' },
     location: { pt: 'Província de Binh Thuan', en: 'Binh Thuan Province' },
     capacity: { pt: 'Capacidade de 15 MW, 6 turbinas', en: '15 MW capacity, 6 turbines' },
     attribution: CC1_ATTRIBUTION,
@@ -54,9 +57,10 @@ export const referenceProjects: ReferenceProject[] = [
     slug: 'tay-ninh-ttc',
     entity: 'CC1',
     name: {
-      pt: 'Usinas Solares de Tay Ninh TTC1 & TTC2',
+      pt: 'Centrais Solares de Tay Ninh TTC1 & TTC2',
       en: 'Tay Ninh TTC1 & TTC2 Solar Power Plants',
     },
+    sector: { pt: 'Centrais solares', en: 'Solar power' },
     location: { pt: 'Tay Ninh', en: 'Tay Ninh' },
     capacity: {
       pt: 'TTC1, capacidade de 68,8 MW; TTC2, capacidade de 50 MW',
@@ -74,9 +78,12 @@ export const referenceProjects: ReferenceProject[] = [
   {
     slug: 'nghi-son-2',
     entity: 'CC1',
-    name: { pt: 'Usina Termelétrica de Nghi Son 2', en: 'Nghi Son 2 Thermal Power Plant' },
+    name: { pt: 'Central Termoeléctrica de Nghi Son 2', en: 'Nghi Son 2 Thermal Power Plant' },
+    sector: { pt: 'Central termoeléctrica', en: 'Thermal power' },
     location: { pt: 'Província de Thanh Hoa', en: 'Thanh Hoa Province' },
-    // COPY.md: profile provides no capacity; must not be invented.
+    // Capacity and execution period supplied by Mr. Lam's written review (July 2026).
+    capacity: { pt: 'Capacidade de 2×600 MW', en: '2×600 MW capacity' },
+    executionPeriod: '2017–2021',
     attribution: CC1_ATTRIBUTION,
     sourceLabel: CC1_SOURCE,
     images: [
@@ -89,6 +96,7 @@ export const referenceProjects: ReferenceProject[] = [
     slug: 'vinh-tan-4',
     entity: 'CC1',
     name: { pt: 'Central Termoeléctrica Vinh Tan 4', en: 'Vinh Tan 4 Thermal Power Plant' },
+    sector: { pt: 'Central termoeléctrica', en: 'Thermal power' },
     location: {
       pt: 'Tuy Phong, província de Binh Thuan',
       en: 'Tuy Phong, Binh Thuan Province',

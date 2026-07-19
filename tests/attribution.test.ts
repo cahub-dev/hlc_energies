@@ -7,6 +7,7 @@ const base: ReferenceProject = {
   slug: 'sample',
   entity: 'CC1',
   name: { pt: 'Projecto', en: 'Project' },
+  sector: { pt: 'Central termoeléctrica', en: 'Thermal power' },
   attribution: {
     pt: 'Executado pela CC1 — parceiro técnico do Consórcio HLC–CC1.',
     en: 'Executed by CC1 — technical partner of the HLC–CC1 Consortium.',
@@ -43,4 +44,9 @@ test('rejects attribution that omits CC1', () => {
 test('rejects a project with no images', () => {
   const bad: ReferenceProject = { ...base, images: [] }
   expect(() => assertValidProjects([bad])).toThrow(/at least one image/)
+})
+
+test('rejects a project missing sector', () => {
+  const bad: ReferenceProject = { ...base, sector: { pt: '', en: '' } }
+  expect(() => assertValidProjects([bad])).toThrow(/missing sector/)
 })

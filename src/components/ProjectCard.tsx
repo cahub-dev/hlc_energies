@@ -17,6 +17,10 @@ export default function ProjectCard({
   onOpen: () => void
 }) {
   const facts: { label: string; value: string }[] = []
+  facts.push({
+    label: 'Sector',
+    value: project.sector[locale],
+  })
   if (project.executionPeriod) {
     facts.push({
       label: locale === 'pt' ? 'Execução' : 'Execution',
@@ -68,6 +72,10 @@ export default function ProjectCard({
   )
 
   const galleryLabel = locale === 'pt' ? 'Ver galeria' : 'View gallery'
+  const n = project.images.length
+  const photosLabel = `${n} ${
+    n === 1 ? (locale === 'pt' ? 'foto' : 'photo') : locale === 'pt' ? 'fotos' : 'photos'
+  }`
 
   return (
     <button
@@ -92,13 +100,21 @@ export default function ProjectCard({
       {/* Hover Overlay (Dark brand color fading in on hover) */}
       <div className="absolute inset-0 bg-hlc-blue-900/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
+      {/* Mandatory CC1 attribution — always visible so the grid can never be
+          read as HLC's own project record. */}
+      <span className="absolute top-6 left-6 z-10 max-w-[62%] inline-flex items-center rounded-full bg-hlc-blue-900/80 backdrop-blur-sm px-2.5 py-1 text-[0.7rem] font-medium leading-snug text-white shadow-sm">
+        {locale === 'pt'
+          ? 'Executado pela CC1 — parceiro técnico do Consórcio'
+          : 'Executed by CC1 — Consortium technical partner'}
+      </span>
+
       {/* Gallery affordance (image count) */}
       <span className="absolute top-6 right-6 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/40 backdrop-blur-sm px-2.5 py-1 text-[0.7rem] font-medium text-white shadow-sm">
         <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" aria-hidden="true">
           <rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" />
           <path d="M3 14l4-4 3 3 5-5 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        {project.images.length}
+        {photosLabel}
       </span>
 
       {/* Content Container */}

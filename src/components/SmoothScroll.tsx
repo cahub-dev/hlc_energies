@@ -1,22 +1,14 @@
 'use client'
 
-import { ReactLenis, useLenis } from 'lenis/react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ReactLenis } from 'lenis/react'
 import type { ReactNode } from 'react'
-
-gsap.registerPlugin(ScrollTrigger)
-
-/** Keeps ScrollTrigger in sync with Lenis' smooth scroll position. */
-function ScrollTriggerBridge() {
-  useLenis(() => ScrollTrigger.update())
-  return null
-}
 
 /**
  * Global smooth scrolling (Lenis) on the window. `anchors` gives in-page hash
- * links (#sobre, #areas, …) a smooth scroll with an offset that clears the
- * fixed header. Lenis inits on the client only, so SSR/prerender is unaffected.
+ * links (#sobre, #consorcio, #areas, …) a smooth scroll with an offset that
+ * clears the fixed header. Lenis inits on the client only, so SSR/prerender is
+ * unaffected. Scroll-reveal animations are handled by IntersectionObserver in
+ * Reveal.tsx, so no ScrollTrigger bridge is needed here.
  */
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   return (
@@ -28,7 +20,6 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         anchors: { offset: -96 },
       }}
     >
-      <ScrollTriggerBridge />
       {children}
     </ReactLenis>
   )

@@ -37,11 +37,11 @@ export default function CommitmentCarousel({
   const snapPointsRef = useRef<number[]>([])
   const [progress, setProgress] = useState(0)
 
+  // Real, authorized local photos only (Unsplash stock removed per review §A3).
   const images = [
     "/local-employment.png",
     "/local-suppliers.jpg",
     "/conformidade-legal.jpg",
-    "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800"
   ]
 
   const allItems = []

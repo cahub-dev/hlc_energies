@@ -4,6 +4,8 @@ import ProjectsShowcase from './ProjectsShowcase'
 import InteractiveAreas from './InteractiveAreas'
 import CommitmentCarousel from './CommitmentCarousel'
 import Reveal from './Reveal'
+import ContactForm from './ContactForm'
+import HeroSlideshow from './HeroSlideshow'
 import type { Locale } from '@/content/types'
 
 export default function HomePage({ locale }: { locale: Locale }) {
@@ -17,14 +19,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         className="relative min-h-screen flex items-end pb-24 text-white overflow-hidden bg-hlc-blue-900"
       >
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <iframe
-            src="https://www.youtube.com/embed/_-fTGrX1888?autoplay=1&mute=1&loop=1&playlist=_-fTGrX1888&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            allow="autoplay; encrypted-media"
-            title={locale === 'pt' ? 'Vídeo de fundo' : 'Background video'}
-            tabIndex={-1}
-          />
-          <div className="absolute inset-0 bg-black/40" />
+          <HeroSlideshow />
         </div>
 
         <div className="page-wrap relative z-10 w-full rise-in pt-32">
@@ -57,7 +52,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* About */}
-      <section id="sobre" className="py-24">
+      <section id="sobre" className="py-16 md:py-20">
         <Reveal stagger className="page-wrap grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="max-w-xl">
             <h2 className="text-3xl font-bold sm:text-4xl text-gray-900 mb-6">
@@ -81,47 +76,77 @@ export default function HomePage({ locale }: { locale: Locale }) {
             </a>
           </div>
           <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
-              alt={c.hero.tagline}
-              className="w-full h-auto rounded-xl object-cover shadow-sm aspect-[4/3] lg:aspect-[1.4/1]"
-            />
+            {/* Branded navy panel (replaces stock photo per review §A3; a real
+                HLC/CC1 photo can be dropped in here once the shoot is cleared). */}
+            <div className="flex aspect-[4/3] lg:aspect-[1.4/1] w-full flex-col items-center justify-center gap-4 rounded-xl bg-hlc-blue-800 p-8 text-center shadow-sm">
+              <img
+                src="/logo-hlc-white.svg"
+                alt="HLC"
+                className="h-12 w-auto"
+                width={190}
+                height={54}
+              />
+              <p className="text-sm font-medium uppercase tracking-widest text-white/80">
+                {c.footer.tagline}
+              </p>
+            </div>
           </div>
         </Reveal>
+      </section>
 
-        {/* Expanded About: Consortium, Technical Capacity & Financials */}
-        <div className="page-wrap mt-24 pt-16 border-t border-gray-100">
-          <Reveal stagger className="grid gap-12 lg:grid-cols-2 lg:gap-24 mb-16">
+      {/* Consortium HLC–CC1 */}
+      <section id="consorcio" className="py-16 md:py-20 border-t border-gray-100">
+        <div className="page-wrap">
+          <Reveal className="max-w-3xl mb-12">
+            <span className="text-sm font-medium text-gray-500 mb-4 block">
+              &bull; {c.consortium.label}
+            </span>
+            <h2 className="text-3xl font-bold sm:text-4xl text-gray-900">
+              {c.consortium.heading}
+            </h2>
+          </Reveal>
+
+          <Reveal stagger className="grid gap-12 lg:grid-cols-2 lg:gap-24">
             {/* Consórcio */}
-            <div className="flex flex-col">
-              <h3 className="text-2xl font-medium text-gray-900 mb-6">
-                {c.consortium.heading}
-              </h3>
-              <div className="space-y-4 text-[var(--ink-muted)] leading-relaxed">
-                {c.consortium.body.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
+            <div className="space-y-4 text-[var(--ink-muted)] text-lg leading-relaxed">
+              {c.consortium.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
 
-            {/* Capacidade Técnica */}
+            {/* Capacidade Técnica + credenciais da CC1 */}
             <div className="flex flex-col">
               <h3 className="text-2xl font-medium text-gray-900 mb-6">
                 {locale === 'pt' ? 'Capacidade Técnica' : 'Technical Capacity'}
               </h3>
-              <p className="text-[var(--ink-muted)] leading-relaxed">
+              <p className="text-[var(--ink-muted)] text-lg leading-relaxed">
                 {c.projects.intro}
               </p>
+              <div className="mt-6 rounded-xl bg-hlc-blue-50 p-6">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-hlc-blue-900">
+                  {c.consortium.credentials.heading}
+                </h4>
+                <ul className="space-y-2">
+                  {c.consortium.credentials.items.map((item, i) => (
+                    <li key={i} className="flex gap-2 leading-relaxed text-[var(--ink-muted)]">
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-hlc-gold-500"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>
       </section>
 
-
-      {/* Areas of interest */}
-      <section id="areas" className="py-24 bg-gray-50">
+      {/* Areas of activity */}
+      <section id="areas" className="py-16 md:py-20 bg-gray-50">
         <div className="page-wrap">
-          <Reveal className="text-center max-w-3xl mx-auto mb-16">
+          <Reveal className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
               &bull; {c.areas.label}
             </span>
@@ -146,7 +171,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Commitment */}
-      <section id="compromisso" className="py-24">
+      <section id="compromisso" className="py-16 md:py-20">
         <div className="page-wrap">
           <Reveal className="text-center max-w-3xl mx-auto">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
@@ -167,9 +192,9 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Reference projects */}
-      <section id="projectos" className="bg-gray-50 py-24 border-t border-gray-100">
+      <section id="projectos" className="bg-gray-50 py-16 md:py-20 border-t border-gray-100">
         <div className="page-wrap">
-          <Reveal className="text-center max-w-3xl mx-auto mb-16">
+          <Reveal className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-sm font-medium text-gray-500 mb-4 block">
               &bull; {c.projects.label}
             </span>
@@ -186,7 +211,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       </section>
 
       {/* Contact */}
-      <section id="contactos" className="bg-white py-24">
+      <section id="contactos" className="bg-white py-16 md:py-20">
         <div className="page-wrap">
           <Reveal stagger className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
@@ -204,6 +229,20 @@ export default function HomePage({ locale }: { locale: Locale }) {
                       </a>
                     </p>
                   </div>
+
+                  {c.contact.phone && (
+                    <div className="pt-4">
+                      <h4 className="text-xs text-gray-500 mb-1">{c.contact.phoneLabel}</h4>
+                      <p className="text-gray-900 text-sm font-medium">
+                        <a
+                          href={`tel:${c.contact.phone.replace(/\s+/g, '')}`}
+                          className="hover:text-hlc-blue-600 transition-colors"
+                        >
+                          {c.contact.phone}
+                        </a>
+                      </p>
+                    </div>
+                  )}
 
                   <div className="pt-4">
                     <h4 className="text-xs text-gray-500 mb-1">{c.contact.addressLabel}</h4>
@@ -250,35 +289,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 </p>
               </div>
 
-              <form className="bg-[#fafafa] rounded-xl p-8 lg:p-10" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-8">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.name}</label>
-                    <input type="text" id="name" placeholder={c.contact.form.namePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.email}</label>
-                    <input type="email" id="email" placeholder={c.contact.form.emailPlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.phone}</label>
-                    <input type="tel" id="phone" placeholder={c.contact.form.phonePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.company}</label>
-                    <input type="text" id="company" placeholder={c.contact.form.companyPlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400" />
-                  </div>
-                </div>
-
-                <div className="mb-10">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">{c.contact.form.message}</label>
-                  <textarea id="message" rows={1} placeholder={c.contact.form.messagePlaceholder} className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-hlc-blue-700 transition-colors bg-transparent text-sm placeholder:text-gray-400 resize-none h-[40px]"></textarea>
-                </div>
-
-                <button type="submit" className="bg-hlc-blue-800 hover:bg-hlc-blue-900 text-white px-8 py-2.5 rounded-md text-[0.85rem] font-medium transition-colors inline-flex items-center gap-2">
-                  {c.contact.form.submit} <span aria-hidden="true">&rarr;</span>
-                </button>
-              </form>
+              <ContactForm form={c.contact.form} />
             </div>
           </Reveal>
         </div>

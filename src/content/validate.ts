@@ -22,6 +22,10 @@ export function assertValidProjects(projects: ReferenceProject[]): void {
     for (const locale of LOCALES) {
       const attribution = p.attribution?.[locale]?.trim()
       const sourceLabel = p.sourceLabel?.[locale]?.trim()
+      const sector = p.sector?.[locale]?.trim()
+      if (!sector) {
+        errors.push(`Project "${p.slug}" [${locale}]: missing sector.`)
+      }
       if (!attribution) {
         errors.push(`Project "${p.slug}" [${locale}]: missing attribution.`)
       } else if (!/CC1/.test(attribution)) {

@@ -21,11 +21,13 @@ export type SiteContent = {
     secondary: CTA
   }
   about: { label: string; heading: string; body: string[] }
-  consortium: { label: string; heading: string; body: string[] }
-  financials: {
+  consortium: {
+    label: string
     heading: string
-    items: { label: string; value: string }[]
+    body: string[]
+    credentials: { heading: string; items: string[] }
   }
+  legal: { heading: string; lines: string[] }
   areas: {
     label: string
     heading: string
@@ -49,6 +51,9 @@ export type SiteContent = {
     address: string
     emailLabel: string
     email: string
+    phoneLabel: string
+    /** Empty until a real number is supplied; rendered only when set. */
+    phone: string
     cta: string
     identity: string[]
     form: ContactForm
@@ -86,6 +91,11 @@ export type ContactForm = {
   message: string
   messagePlaceholder: string
   submit: string
+  consent: string
+  privacy: string
+  sending: string
+  success: string
+  error: string
 }
 
 /**
@@ -96,6 +106,8 @@ export type ReferenceProject = {
   slug: string
   entity: 'CC1'
   name: Localized<string>
+  /** Energy sector, in Mozambican PT terms (e.g. Hidroeléctrica, Eólica). */
+  sector: Localized<string>
   attribution: Localized<string>
   sourceLabel: Localized<string>
   location?: Localized<string>

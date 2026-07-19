@@ -16,15 +16,16 @@ const pt: SiteContent = {
   nav: [
     { label: 'Início', to: '#top' },
     { label: 'Sobre', to: '#sobre' },
-    { label: 'Indústrias e Serviços', to: '#areas' },
+    { label: 'Consórcio', to: '#consorcio' },
+    { label: 'Áreas de actuação', to: '#areas' },
     { label: 'Projectos', to: '#projectos' },
+    { label: 'Compromisso', to: '#compromisso' },
   ],
   hero: {
     title: 'HLC Energias Renováveis e Infraestruturas, LDA',
     tagline: 'Energia e infra-estruturas em Moçambique',
     body: [
-      'A HLC Moçambique é uma sociedade constituída ao abrigo da lei moçambicana, membro do Grupo HLC (Vietname).',
-      'A sociedade foi constituída para servir como entidade moçambicana de contratação e de execução para os projectos de energia, infra-estruturas e construção do Grupo e dos seus parceiros técnicos em Moçambique.',
+      'Entidade moçambicana de contratação e execução, em Consórcio com a CC1 (Vietname), o parceiro técnico e EPC.',
     ],
     primary: { label: 'Conheça a HLC', to: '#sobre' },
     secondary: { label: 'Contactos', to: '#contactos' },
@@ -33,6 +34,7 @@ const pt: SiteContent = {
     label: 'Sobre a HLC',
     heading: 'Sobre a HLC',
     body: [
+      'HLC Moçambique é o nome comercial da HLC Energias Renováveis e Infraestruturas, LDA.',
       'A HLC Moçambique é uma sociedade constituída ao abrigo da lei moçambicana, membro do Grupo HLC (Vietname). A sociedade foi constituída com um propósito definido: servir como entidade moçambicana de contratação e de execução para os projectos de energia, infra-estruturas e construção do Grupo e dos seus parceiros técnicos em Moçambique.',
       'A estrutura é deliberada e corresponde à prática corrente dos empreiteiros internacionais na entrada em novos mercados: a entidade local assegura o enquadramento jurídico, as licenças, a mão-de-obra e o conteúdo local; o parceiro técnico do Consórcio assegura a experiência, a engenharia, a capacidade de execução e as garantias.',
     ],
@@ -41,22 +43,32 @@ const pt: SiteContent = {
     label: 'Consórcio',
     heading: 'O Consórcio HLC–CC1',
     body: [
-      'Para projectos de energia e infra-estruturas em Moçambique, a HLC Moçambique opera em regime de Consórcio contratual com a Construction Corporation No. 1 – JSC (CC1).',
-      'Perante o cliente, a HLC Moçambique é signatária dos contratos em Moçambique. A CC1 assegura o suporte técnico e as garantias nos termos do Acordo de Consórcio.',
+      'Para projectos de energia e infra-estruturas em Moçambique, a HLC Moçambique opera em regime de Consórcio contratual com a Construction Corporation No. 1 – JSC (CC1), o parceiro técnico e EPC vietnamita do Consórcio.',
+      'Perante o cliente, a HLC Moçambique é signatária dos contratos em Moçambique. A CC1 assegura a engenharia, a execução EPC, o suporte técnico e as garantias nos termos do Acordo de Consórcio.',
     ],
+    credentials: {
+      heading: 'Credenciais da CC1',
+      items: [
+        'Fundada em 1979 — uma das construtoras mais experientes do Vietname',
+        'Sociedade cotada, de capitais integralmente privados',
+        '45 anos de experiência; empreiteiro geral e EPC desde 2007',
+        'Certificações ISO 9001, ISO 14001 e ISO 45001',
+      ],
+    },
   },
-  financials: {
-    heading: 'Indicadores Financeiros',
-    items: [
-      { label: 'Receitas (2024)', value: 'Aprox. USD 406 milhões' },
-      { label: 'Activos totais', value: 'Aprox. USD 670 milhões' },
-      { label: 'Resultado antes de impostos (2024)', value: 'Aprox. USD 13 milhões' },
-      { label: 'Capital social', value: '≈ USD 130 milhões' },
+  legal: {
+    heading: 'Informação legal',
+    lines: [
+      'HLC Energias Renováveis e Infraestruturas, LDA',
+      'NUIT: 402198583',
+      'N.º de entidade legal: 105074676',
+      'Av./Rua de Micaia, Bairro Costa do Sol, Quarteirão 56, Casa N.º 115, Cidade de Maputo',
+      'República de Moçambique',
     ],
   },
   areas: {
-    label: 'Áreas de interesse',
-    heading: 'Áreas de interesse',
+    label: 'Áreas de actuação',
+    heading: 'Áreas de actuação',
     intro:
       'O Consórcio HLC–CC1 foca a sua actuação nos seguintes segmentos do sector energético e de infra-estruturas em Moçambique:',
     items: [
@@ -120,6 +132,8 @@ const pt: SiteContent = {
       'Moçambique, Cidade de Maputo, Distrito de Kamavota, Bairro Costa do Sol, Rua de Micaia, Q. N.º 56, N.º 115',
     emailLabel: 'E-mail',
     email: 'info.moz@hlmic.com',
+    phoneLabel: 'Telefone',
+    phone: '',
     cta: 'Enviar e-mail',
     identity: [
       'HLC Energias Renováveis e Infraestruturas, LDA',
@@ -143,12 +157,18 @@ const pt: SiteContent = {
       message: 'Mensagem',
       messagePlaceholder: 'Introduza a mensagem',
       submit: 'Enviar',
+      consent: 'Autorizo o tratamento dos meus dados para resposta a este contacto.',
+      privacy:
+        'Os seus dados são utilizados apenas para responder a este contacto e não são partilhados com terceiros.',
+      sending: 'A enviar…',
+      success: 'Mensagem enviada. Entraremos em contacto em breve.',
+      error: 'Não foi possível enviar. Tente novamente ou escreva para o e-mail indicado.',
     },
   },
   footer: {
     tagline: 'Sector da Energia e Infra-Estruturas',
     navTitle: 'Navegação',
-    areasTitle: 'Áreas de interesse',
+    areasTitle: 'Áreas de actuação',
     contactTitle: 'Contactos',
     contactCta: 'Fale connosco',
     backToTop: 'Voltar ao topo',
@@ -173,15 +193,16 @@ const en: SiteContent = {
   nav: [
     { label: 'Home', to: '#top' },
     { label: 'About', to: '#sobre' },
-    { label: 'Industries and Services', to: '#areas' },
+    { label: 'Consortium', to: '#consorcio' },
+    { label: 'Areas of activity', to: '#areas' },
     { label: 'Projects', to: '#projectos' },
+    { label: 'Commitment', to: '#compromisso' },
   ],
   hero: {
     title: 'HLC Renewable Energies and Infrastructures, LDA',
     tagline: 'Energy and infrastructure in Mozambique',
     body: [
-      'HLC Mozambique is a company incorporated under Mozambican law and a member of the HLC Group (Vietnam).',
-      "The company was established to serve as the Mozambican contracting and execution entity for the Group's energy, infrastructure and construction projects and those of its technical partners in Mozambique.",
+      'Mozambican contracting and execution entity, in Consortium with CC1 (Vietnam), the technical and EPC partner.',
     ],
     primary: { label: 'About HLC', to: '#sobre' },
     secondary: { label: 'Contact', to: '#contactos' },
@@ -190,6 +211,7 @@ const en: SiteContent = {
     label: 'About HLC',
     heading: 'About HLC',
     body: [
+      'HLC Mozambique is the trading name of HLC Renewable Energies and Infrastructures, LDA.',
       'HLC Mozambique is a company incorporated under Mozambican law, and a member of the HLC Group (Vietnam). The company was established with a defined purpose: to serve as the Mozambican contracting and execution entity for the energy, infrastructure, and construction projects of the Group and its technical partners in Mozambique.',
       "The structure is deliberate and corresponds to the current practice of international contractors entering new markets: the local entity ensures the legal framework, licenses, workforce, and local content; the Consortium's technical partner ensures the experience, engineering, execution capacity, and guarantees.",
     ],
@@ -198,22 +220,32 @@ const en: SiteContent = {
     label: 'Consortium',
     heading: 'The HLC–CC1 Consortium',
     body: [
-      'For energy and infrastructure projects in Mozambique, HLC Mozambique operates under a contractual Consortium with Construction Corporation No. 1 – JSC (CC1).',
-      'Before the client, HLC Mozambique is the signatory to contracts in Mozambique. CC1 provides technical support and guarantees under the terms of the Consortium Agreement.',
+      'For energy and infrastructure projects in Mozambique, HLC Mozambique operates under a contractual Consortium with Construction Corporation No. 1 – JSC (CC1), the Vietnamese technical and EPC partner of the Consortium.',
+      'Before the client, HLC Mozambique is the signatory to contracts in Mozambique. CC1 provides the engineering, EPC execution, technical support and guarantees under the terms of the Consortium Agreement.',
     ],
+    credentials: {
+      heading: 'CC1 credentials',
+      items: [
+        "Founded in 1979 — one of Vietnam's most experienced construction companies",
+        'Publicly listed company with fully private capital',
+        '45 years of experience; general and EPC contractor since 2007',
+        'ISO 9001, ISO 14001 and ISO 45001 certified',
+      ],
+    },
   },
-  financials: {
-    heading: 'Financial Indicators',
-    items: [
-      { label: 'Revenue (2024)', value: 'Approx. USD 406 million' },
-      { label: 'Total Assets', value: 'Approx. USD 670 million' },
-      { label: 'Profit before tax (2024)', value: 'Approx. USD 13 million' },
-      { label: 'Share Capital', value: '≈ USD 130 million' },
+  legal: {
+    heading: 'Legal information',
+    lines: [
+      'HLC Energias Renováveis e Infraestruturas, LDA',
+      'NUIT: 402198583',
+      'Legal entity number: 105074676',
+      'Av./Rua de Micaia, Bairro Costa do Sol, Quarteirão 56, Casa N.º 115, Maputo City',
+      'Republic of Mozambique',
     ],
   },
   areas: {
-    label: 'Areas of interest',
-    heading: 'Areas of interest',
+    label: 'Areas of activity',
+    heading: 'Areas of activity',
     intro:
       'The HLC–CC1 Consortium focuses its activities on the following energy and infrastructure segments in Mozambique:',
     items: [
@@ -277,6 +309,8 @@ const en: SiteContent = {
       'Mozambique, Maputo City, Kamavota District, Costa do Sol Neighbourhood, Rua de Micaia, Quarter No. 56, No. 115',
     emailLabel: 'Email',
     email: 'info.moz@hlmic.com',
+    phoneLabel: 'Phone',
+    phone: '',
     cta: 'Send email',
     identity: [
       'HLC Renewable Energies and Infrastructures, LDA',
@@ -299,12 +333,18 @@ const en: SiteContent = {
       message: 'Message',
       messagePlaceholder: 'Enter message',
       submit: 'Submit',
+      consent: 'I agree to the processing of my data to respond to this enquiry.',
+      privacy:
+        'Your data is used only to respond to this enquiry and is not shared with third parties.',
+      sending: 'Sending…',
+      success: 'Message sent. We will get back to you soon.',
+      error: 'Could not send. Please try again or email us directly.',
     },
   },
   footer: {
     tagline: 'Energy and Infrastructure Sector',
     navTitle: 'Navigation',
-    areasTitle: 'Areas of interest',
+    areasTitle: 'Areas of activity',
     contactTitle: 'Contact',
     contactCta: 'Get in touch',
     backToTop: 'Back to top',
