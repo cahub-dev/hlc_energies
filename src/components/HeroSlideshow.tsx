@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { areaImages } from '@/content/media'
+import { heroImages } from '@/content/media'
 
 gsap.registerPlugin(useGSAP)
 
@@ -16,12 +16,11 @@ gsap.registerPlugin(useGSAP)
  * there is no flash before hydration. Honors prefers-reduced-motion by holding
  * the first slide static.
  *
- * The slides are the shared "Áreas de actuação" image set (see content/media.ts)
- * so the hero and that section stay in sync; the first slides are authorized
- * local energy photos, the rest are interim stock pending the Maputo shoot.
- * CC1 project photos are intentionally excluded — not cleared for public use.
+ * Slides come from content/media.ts (heroImages): the shared "Áreas de actuação"
+ * set plus the CC1 Han Kiem 2 (Central Eólica) photos added at the client's
+ * request. See media.ts for the rights caveat on the CC1 photos.
  */
-const SLIDES = areaImages
+const SLIDES = heroImages
 
 const HOLD = 5 // seconds each slide stays fully visible
 const FADE = 1.6 // seconds for each crossfade

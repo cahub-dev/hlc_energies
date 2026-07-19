@@ -46,6 +46,27 @@ const pt: SiteContent = {
       'Para projectos de energia e infra-estruturas em Moçambique, a HLC Moçambique opera em regime de Consórcio contratual com a Construction Corporation No. 1 – JSC (CC1), o parceiro técnico e EPC vietnamita do Consórcio.',
       'Perante o cliente, a HLC Moçambique é signatária dos contratos em Moçambique. A CC1 assegura a engenharia, a execução EPC, o suporte técnico e as garantias nos termos do Acordo de Consórcio.',
     ],
+    roles: {
+      localHeading: 'Entidade local',
+      localName: 'HLC Moçambique',
+      localItems: [
+        'Entidade contratante e de execução local',
+        'Pessoa jurídica moçambicana',
+        'Licenciamento',
+        'Mão-de-obra e conteúdo local',
+        'Logística e apoio às obras',
+      ],
+      partnerHeading: 'Parceiro técnico',
+      partnerName: 'CC1 — Construction Corporation No. 1',
+      partnerItems: [
+        'Capacidade técnica e de execução EPC',
+        'Engenharia e gestão de projecto',
+        'Quadros técnicos destacados',
+        'Sistemas ISO (qualidade, ambiente, segurança)',
+        'Garantias de execução',
+        'Capacidade financeira',
+      ],
+    },
     credentials: {
       heading: 'Credenciais da CC1',
       items: [
@@ -53,6 +74,45 @@ const pt: SiteContent = {
         'Sociedade cotada, de capitais integralmente privados',
         '45 anos de experiência; empreiteiro geral e EPC desde 2007',
         'Certificações ISO 9001, ISO 14001 e ISO 45001',
+      ],
+    },
+    transfer: {
+      heading: 'Transferência de capacidade',
+      intro:
+        'Modelo estruturado de transferência de competências técnicas e de gestão da CC1 para as operações do Consórcio em Moçambique.',
+      pillars: [
+        {
+          title: 'Engenheiros e gestores destacados',
+          body: 'Destacamento de engenheiros e gestores de projecto da CC1 para as obras em Moçambique, em regime definido por projecto.',
+        },
+        {
+          title: 'Sistemas ISO de gestão',
+          body: 'Aplicação dos sistemas de gestão de qualidade, ambiente e segurança da CC1 (ISO 9001/14001/45001) a todas as obras do Consórcio.',
+        },
+        {
+          title: 'Aprovação técnica',
+          body: 'Aprovação técnica dos projectos de engenharia pelos quadros seniores da CC1.',
+        },
+        {
+          title: 'Equipamentos especializados',
+          body: 'Mobilização de equipamentos especializados pela CC1 conforme as necessidades de cada obra.',
+        },
+      ],
+      note: {
+        title: 'Moçambicanização dos quadros',
+        body: 'Formação em serviço de técnicos moçambicanos integrados nas equipas de obra, com metas de progressiva moçambicanização dos quadros técnicos e de gestão.',
+      },
+    },
+    partners: {
+      heading: 'Clientes e parceiros internacionais da CC1',
+      intro:
+        'A CC1 acumula décadas de colaboração com os maiores grupos de engenharia e construção da Ásia e do mundo. No mercado interno vietnamita, executa obras para a companhia eléctrica nacional e para a companhia nacional de petróleo e gás.',
+      statValue: '13+',
+      statLabel: 'Parceiros internacionais',
+      names: [
+        'Doosan', 'JGC', 'Kajima', 'Maeda', 'Marubeni', 'Obayashi', 'Shimizu',
+        'Sumitomo', 'SK', 'Taisei', 'Tokyu', 'TOA', 'Hyundai E&C', 'Daewoo E&C',
+        'WHA Group', 'Samsung Engineering', 'VSIP', 'Mitsubishi', 'Sembcorp',
       ],
     },
   },
@@ -122,6 +182,20 @@ const pt: SiteContent = {
     intro:
       'Projectos de energia e infra-estruturas de grande escala executados pelo nosso parceiro técnico, a Construction Corporation No. 1 – JSC (CC1).',
     cta: { label: 'Ver projectos de referência', to: '#projectos' },
+    record: {
+      heading: 'Outras infra-estruturas de grande escala executadas pela CC1',
+      intro:
+        'Além da energia, a CC1 executa infra-estruturas de grande escala — aeroportos, transportes urbanos, rodovias e complexos industriais.',
+      items: [
+        { name: 'Long Thanh International Airport — Terminal de Passageiros, Fase 1', period: '2023–2026' },
+        { name: 'Tan Son Nhat International Airport — Terminal T3', period: '2022–2024' },
+        { name: 'Metro de Ho Chi Minh — Linha 1 (estações e túneis)', period: '2014–2018' },
+        { name: 'Auto-estrada Norte–Sul (várias secções, 37–73 km cada)', period: '2021–2025' },
+        { name: 'Refinaria e Complexo Petroquímico de Nghi Son (pacotes de construção)', period: '2013–2016' },
+        { name: 'Complexo Petroquímico de Long Son (pacotes de construção)', period: '2020–2022' },
+        { name: 'Estação de Tratamento de Água de Thu Duc — Fase 3 (300.000 m³/dia)', period: '2013–2015' },
+      ],
+    },
   },
   contact: {
     label: 'Contactos',
@@ -223,6 +297,27 @@ const en: SiteContent = {
       'For energy and infrastructure projects in Mozambique, HLC Mozambique operates under a contractual Consortium with Construction Corporation No. 1 – JSC (CC1), the Vietnamese technical and EPC partner of the Consortium.',
       'Before the client, HLC Mozambique is the signatory to contracts in Mozambique. CC1 provides the engineering, EPC execution, technical support and guarantees under the terms of the Consortium Agreement.',
     ],
+    roles: {
+      localHeading: 'Local entity',
+      localName: 'HLC Mozambique',
+      localItems: [
+        'Local contracting and execution entity',
+        'Mozambican legal entity',
+        'Licensing',
+        'Workforce and local content',
+        'Logistics and works support',
+      ],
+      partnerHeading: 'Technical partner',
+      partnerName: 'CC1 — Construction Corporation No. 1',
+      partnerItems: [
+        'Technical and EPC execution capacity',
+        'Engineering and project management',
+        'Assigned technical personnel',
+        'ISO systems (quality, environment, safety)',
+        'Execution guarantees',
+        'Financial capacity',
+      ],
+    },
     credentials: {
       heading: 'CC1 credentials',
       items: [
@@ -230,6 +325,45 @@ const en: SiteContent = {
         'Publicly listed company with fully private capital',
         '45 years of experience; general and EPC contractor since 2007',
         'ISO 9001, ISO 14001 and ISO 45001 certified',
+      ],
+    },
+    transfer: {
+      heading: 'Capacity transfer',
+      intro:
+        "A structured model for transferring CC1's technical and management skills to the Consortium's operations in Mozambique.",
+      pillars: [
+        {
+          title: 'Seconded engineers and managers',
+          body: 'Secondment of CC1 engineers and project managers to works in Mozambique, on a per-project basis.',
+        },
+        {
+          title: 'ISO management systems',
+          body: "Application of CC1's quality, environment and safety management systems (ISO 9001/14001/45001) to all Consortium works.",
+        },
+        {
+          title: 'Technical sign-off',
+          body: "Technical approval of engineering designs by CC1's senior staff.",
+        },
+        {
+          title: 'Specialised equipment',
+          body: 'Mobilisation of specialised equipment by CC1 as each project requires.',
+        },
+      ],
+      note: {
+        title: 'Localisation of Mozambican personnel',
+        body: 'On-the-job training of Mozambican technicians embedded in site teams, with targets for the progressive localisation of technical and management staff.',
+      },
+    },
+    partners: {
+      heading: "CC1's international clients and partners",
+      intro:
+        'CC1 has decades of collaboration with the largest engineering and construction groups in Asia and worldwide. In its home Vietnamese market, it delivers works for the national power utility and the national oil and gas company.',
+      statValue: '13+',
+      statLabel: 'International partners',
+      names: [
+        'Doosan', 'JGC', 'Kajima', 'Maeda', 'Marubeni', 'Obayashi', 'Shimizu',
+        'Sumitomo', 'SK', 'Taisei', 'Tokyu', 'TOA', 'Hyundai E&C', 'Daewoo E&C',
+        'WHA Group', 'Samsung Engineering', 'VSIP', 'Mitsubishi', 'Sembcorp',
       ],
     },
   },
@@ -299,6 +433,20 @@ const en: SiteContent = {
     intro:
       'Large-scale energy and infrastructure projects executed by our technical partner, Construction Corporation No. 1 – JSC (CC1).',
     cta: { label: 'View reference projects', to: '#projectos' },
+    record: {
+      heading: 'Other large-scale infrastructure delivered by CC1',
+      intro:
+        'Beyond energy, CC1 delivers large-scale infrastructure — airports, urban transit, expressways and industrial complexes.',
+      items: [
+        { name: 'Long Thanh International Airport — Passenger Terminal, Phase 1', period: '2023–2026' },
+        { name: 'Tan Son Nhat International Airport — Terminal T3', period: '2022–2024' },
+        { name: 'Ho Chi Minh City Urban Railway Line 1 (metro stations and tunnels)', period: '2014–2018' },
+        { name: 'North–South Expressway (various sections, 37–73 km each)', period: '2021–2025' },
+        { name: 'Nghi Son Refinery & Petrochemical Complex (construction packages)', period: '2013–2016' },
+        { name: 'Long Son Petrochemical Complex (construction packages)', period: '2020–2022' },
+        { name: 'Thu Duc Water Plant — Phase 3 (300,000 m³/day)', period: '2013–2015' },
+      ],
+    },
   },
   contact: {
     label: 'Contact',

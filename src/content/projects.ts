@@ -118,6 +118,32 @@ export const referenceProjects: ReferenceProject[] = [
       '/project-reference-images/05_vinh-tan-4-thermal-power-plant/vinh-tan-4-03.jpg',
     ],
   },
+  {
+    slug: 'phu-my-ccpp',
+    entity: 'CC1',
+    name: {
+      pt: 'Complexo Termoeléctrico de Ciclo Combinado de Phu My',
+      en: 'Phu My Combined-Cycle Power Plant Complex',
+    },
+    sector: {
+      pt: 'Central termoeléctrica de ciclo combinado',
+      en: 'Combined-cycle thermal power',
+    },
+    location: {
+      pt: 'Província de Ba Ria Vung Tau',
+      en: 'Ba Ria Vung Tau Province',
+    },
+    // Capacity intentionally omitted: the HLC Company Profile conflicts with
+    // itself (450 MW on the project page vs 1,833 MW in the summary stat box).
+    // Add a figure only once CC1/HLC confirms the correct value. See SOURCE.md.
+    attribution: CC1_ATTRIBUTION,
+    sourceLabel: CC1_SOURCE,
+    images: [
+      '/project-reference-images/06_phu-my-ccpp/phu-my-01.jpg',
+      '/project-reference-images/06_phu-my-ccpp/phu-my-02.jpg',
+      '/project-reference-images/06_phu-my-ccpp/phu-my-03.jpg',
+    ],
+  },
 ]
 
 // Fail the build/import if any project lacks valid CC1 attribution.

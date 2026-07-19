@@ -140,6 +140,99 @@ export default function HomePage({ locale }: { locale: Locale }) {
               </div>
             </div>
           </Reveal>
+
+          {/* Role breakdown: HLC (local) vs CC1 (technical) */}
+          <Reveal stagger className="mt-16 grid gap-8 md:grid-cols-2">
+            <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-hlc-blue-700">
+                {c.consortium.roles.localHeading}
+              </h3>
+              <p className="mt-1 mb-5 text-lg font-medium text-gray-900">
+                {c.consortium.roles.localName}
+              </p>
+              <ul className="space-y-2.5">
+                {c.consortium.roles.localItems.map((item, i) => (
+                  <li key={i} className="flex gap-2 leading-relaxed text-[var(--ink-muted)]">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-hlc-blue-700" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-hlc-gold-600">
+                {c.consortium.roles.partnerHeading}
+              </h3>
+              <p className="mt-1 mb-5 text-lg font-medium text-gray-900">
+                {c.consortium.roles.partnerName}
+              </p>
+              <ul className="space-y-2.5">
+                {c.consortium.roles.partnerItems.map((item, i) => (
+                  <li key={i} className="flex gap-2 leading-relaxed text-[var(--ink-muted)]">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-hlc-gold-500" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+
+          {/* Capacity transfer */}
+          <div className="mt-16">
+            <Reveal className="max-w-3xl mb-10">
+              <h3 className="text-2xl font-medium text-gray-900 mb-3">
+                {c.consortium.transfer.heading}
+              </h3>
+              <p className="text-[var(--ink-muted)] leading-relaxed">
+                {c.consortium.transfer.intro}
+              </p>
+            </Reveal>
+            <Reveal stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {c.consortium.transfer.pillars.map((p, i) => (
+                <div key={i} className="rounded-xl bg-gray-50 p-6">
+                  <div className="mb-3 text-sm font-semibold text-hlc-gold-600">0{i + 1}</div>
+                  <h4 className="mb-2 font-medium text-gray-900">{p.title}</h4>
+                  <p className="text-sm leading-relaxed text-[var(--ink-muted)]">{p.body}</p>
+                </div>
+              ))}
+            </Reveal>
+            <Reveal className="mt-6 rounded-xl bg-hlc-blue-800 p-6 text-white">
+              <span className="font-medium text-hlc-gold-300">
+                {c.consortium.transfer.note.title}
+              </span>{' '}
+              <span className="text-white/90">{c.consortium.transfer.note.body}</span>
+            </Reveal>
+          </div>
+
+          {/* CC1 international partners */}
+          <div className="mt-16">
+            <Reveal className="max-w-3xl mb-8">
+              <h3 className="text-2xl font-medium text-gray-900 mb-3">
+                {c.consortium.partners.heading}
+              </h3>
+              <p className="text-[var(--ink-muted)] leading-relaxed">
+                {c.consortium.partners.intro}
+              </p>
+            </Reveal>
+            <Reveal className="flex flex-wrap items-center gap-3">
+              <span className="mr-2 inline-flex items-baseline gap-2 rounded-lg bg-hlc-blue-50 px-4 py-2">
+                <span className="text-2xl font-bold text-hlc-blue-900">
+                  {c.consortium.partners.statValue}
+                </span>
+                <span className="text-sm text-hlc-blue-800">
+                  {c.consortium.partners.statLabel}
+                </span>
+              </span>
+              {c.consortium.partners.names.map((n) => (
+                <span
+                  key={n}
+                  className="rounded-full border border-gray-200 px-3 py-1.5 text-sm text-gray-700"
+                >
+                  {n}
+                </span>
+              ))}
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -207,6 +300,38 @@ export default function HomePage({ locale }: { locale: Locale }) {
           </Reveal>
 
           <ProjectsShowcase projects={referenceProjects} locale={locale} />
+
+          {/* CC1 broader track record (beyond energy) */}
+          <div className="mt-16 border-t border-gray-200 pt-12">
+            <Reveal className="max-w-3xl mb-8">
+              <h3 className="text-2xl font-medium text-gray-900 mb-3">
+                {c.projects.record.heading}
+              </h3>
+              <p className="text-[var(--ink-muted)] leading-relaxed">
+                {c.projects.record.intro}
+              </p>
+            </Reveal>
+            <Reveal>
+              <ul className="divide-y divide-gray-200 border-y border-gray-200">
+                {c.projects.record.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+                  >
+                    <span className="text-gray-900">{item.name}</span>
+                    <span className="shrink-0 text-sm tabular-nums text-gray-500">
+                      {item.period}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <p className="mt-6 text-sm italic text-gray-500">
+              {locale === 'pt'
+                ? 'Executado pela CC1, parceiro técnico do Consórcio.'
+                : 'Executed by CC1, the Consortium technical partner.'}
+            </p>
+          </div>
         </div>
       </section>
 

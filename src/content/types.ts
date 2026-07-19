@@ -25,7 +25,28 @@ export type SiteContent = {
     label: string
     heading: string
     body: string[]
+    roles: {
+      localHeading: string
+      localName: string
+      localItems: string[]
+      partnerHeading: string
+      partnerName: string
+      partnerItems: string[]
+    }
     credentials: { heading: string; items: string[] }
+    transfer: {
+      heading: string
+      intro: string
+      pillars: { title: string; body: string }[]
+      note: { title: string; body: string }
+    }
+    partners: {
+      heading: string
+      intro: string
+      statValue: string
+      statLabel: string
+      names: string[]
+    }
   }
   legal: { heading: string; lines: string[] }
   areas: {
@@ -42,7 +63,17 @@ export type SiteContent = {
     pillars: Pillar[]
     notes: string[]
   }
-  projects: { label: string; heading: string; intro: string; cta: CTA }
+  projects: {
+    label: string
+    heading: string
+    intro: string
+    cta: CTA
+    record: {
+      heading: string
+      intro: string
+      items: { name: string; period: string }[]
+    }
+  }
   contact: {
     label: string
     heading: string

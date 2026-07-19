@@ -17,3 +17,18 @@ export const areaImages: string[] = [
   'https://images.unsplash.com/photo-1610028290816-5d937a395a49?auto=format&fit=crop&q=80&w=1600',
   'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1600',
 ]
+
+/**
+ * Hero slideshow images: the Áreas set plus the CC1 Han Kiem 2 (Central Eólica)
+ * photos, added at the client's explicit request.
+ *
+ * ⚠ Rights: the Han Kiem 2 photos are CC1 reference assets whose SOURCE.md marks
+ * them "not cleared for public use" — confirm publication rights with CC1/HLC
+ * before go-live. They are also low-res (~1000×734) and may look soft full-bleed
+ * on large screens.
+ */
+export const heroImages: string[] = [
+  ...areaImages,
+  '/project-reference-images/02_han-kiem-2-wind-power-plant/han-kiem-2-01.jpg',
+  '/project-reference-images/02_han-kiem-2-wind-power-plant/han-kiem-2-02.jpg',
+]
