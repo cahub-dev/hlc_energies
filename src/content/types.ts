@@ -78,6 +78,8 @@ export type SiteContent = {
     phoneLabel: string
     /** Empty until a real number is supplied; rendered only when set. */
     phone: string
+    /** Named contact person shown with the phone; empty to hide. */
+    contactPerson: string
     cta: string
     identity: string[]
     form: ContactForm

@@ -337,6 +337,9 @@ export default function HomePage({ locale }: { locale: Locale }) {
                           {c.contact.phone}
                         </a>
                       </p>
+                      {c.contact.contactPerson && (
+                        <p className="text-gray-500 text-sm mt-0.5">{c.contact.contactPerson}</p>
+                      )}
                     </div>
                   )}
 

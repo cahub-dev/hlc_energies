@@ -78,6 +78,15 @@ export default function Footer({ locale }: { locale: Locale }) {
               <a href={`mailto:${c.contact.email}`} className="block hover:text-white transition-colors">
                 {c.contact.email}
               </a>
+              {c.contact.phone && (
+                <a
+                  href={`tel:${c.contact.phone.replace(/\s+/g, '')}`}
+                  className="block hover:text-white transition-colors"
+                >
+                  {c.contact.phone}
+                  {c.contact.contactPerson ? ` · ${c.contact.contactPerson}` : ''}
+                </a>
+              )}
               <p>{c.contact.address}</p>
             </div>
             <a

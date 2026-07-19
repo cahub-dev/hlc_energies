@@ -195,7 +195,8 @@ const pt: SiteContent = {
     emailLabel: 'E-mail',
     email: 'info.moz@hlmic.com',
     phoneLabel: 'Telefone',
-    phone: '',
+    phone: '+258 84 663 4635',
+    contactPerson: 'Simão Guambe',
     cta: 'Enviar e-mail',
     identity: [
       'HLC Energias Renováveis e Infraestruturas, LDA',
@@ -434,7 +435,8 @@ const en: SiteContent = {
     emailLabel: 'Email',
     email: 'info.moz@hlmic.com',
     phoneLabel: 'Phone',
-    phone: '',
+    phone: '+258 84 663 4635',
+    contactPerson: 'Simão Guambe',
     cta: 'Send email',
     identity: [
       'HLC Renewable Energies and Infrastructures, LDA',

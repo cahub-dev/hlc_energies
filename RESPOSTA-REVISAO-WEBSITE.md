@@ -29,7 +29,7 @@ Resumo dos pontos da revisão (mensagens via Hermes + ficheiro *HLC Website Revi
 - ✅ **A2 · Nome legal vs comercial** — adicionada a frase: *"HLC Moçambique é o nome comercial da HLC Energias Renováveis e Infraestruturas, LDA."*
 - ◑ **A3 · Imagens de stock** — removidas as fotos genéricas (Unsplash); a pedido, repostas nas Áreas e no hero como solução **temporária**. ⏳ Falta a sessão fotográfica real (HLC Maputo / fotos CC1 autorizadas).
 - ✅ **A4 · Atribuição à CC1 nos cartões** — cada cartão de projecto mostra agora *"Executado pela CC1 — parceiro técnico do Consórcio"*.
-- ⏳ **A5 · Telefone** — em falta. Não inventámos nenhum número; o campo está pronto e aparece assim que indicarem um **número +258**. Confirmar também o domínio de e-mail *hlmic.com*.
+- ✅ **A5 · Telefone** — adicionado: **+258 84 663 4635** (Simão Guambe), nos Contactos e no rodapé. Confirmar o domínio de e-mail *hlmic.com*.
 
 ## 5. Secção B — conteúdo e consistência
 
@@ -66,8 +66,7 @@ Resumo dos pontos da revisão (mensagens via Hermes + ficheiro *HLC Website Revi
 
 ## Pontos que dependem de decisão/dados vossos
 
-1. **Telefone (+258)** para os Contactos.
-2. **Capacidade do Phu My** — o perfil é contraditório (450 MW vs 1.833 MW); deixámos a capacidade em branco até confirmarem.
+1. **Capacidade do Phu My** — o perfil é contraditório (450 MW vs 1.833 MW); deixámos a capacidade em branco até confirmarem.
 3. **Fotos reais autorizadas** (HLC Maputo e/ou CC1) para substituir as imagens temporárias e para uso público dos projectos da CC1.
 4. **Logótipos dos parceiros** internacionais (se quiserem logótipos em vez de texto).
 5. **Publicar o representante legal?** (Ngoc Ha Nguyen) — actualmente não publicado.
