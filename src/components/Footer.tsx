@@ -78,15 +78,17 @@ export default function Footer({ locale }: { locale: Locale }) {
               <a href={`mailto:${c.contact.email}`} className="block hover:text-white transition-colors">
                 {c.contact.email}
               </a>
-              {c.contact.phone && (
+              {c.contact.contacts.map((person) => (
                 <a
-                  href={`tel:${c.contact.phone.replace(/\s+/g, '')}`}
+                  key={person.phone}
+                  href={`tel:${person.phone.replace(/\s+/g, '')}`}
                   className="block hover:text-white transition-colors"
                 >
-                  {c.contact.phone}
-                  {c.contact.contactPerson ? ` · ${c.contact.contactPerson}` : ''}
+                  {person.phone}
+                  {` · ${person.name}`}
+                  {person.role ? ` (${person.role})` : ''}
                 </a>
-              )}
+              ))}
               <p>{c.contact.address}</p>
             </div>
             <a

@@ -195,8 +195,10 @@ const pt: SiteContent = {
     emailLabel: 'E-mail',
     email: 'info.moz@hlmic.com',
     phoneLabel: 'Telefone',
-    phone: '+258 84 663 4635',
-    contactPerson: 'Simão Guambe',
+    contacts: [
+      { name: 'Lan Anh Nguyen', role: 'CEO', phone: '+258 84 020 3916' },
+      { name: 'Simão Guambe', phone: '+258 84 663 4635' },
+    ],
     cta: 'Enviar e-mail',
     identity: [
       'HLC Energias Renováveis e Infraestruturas, LDA',
@@ -435,8 +437,10 @@ const en: SiteContent = {
     emailLabel: 'Email',
     email: 'info.moz@hlmic.com',
     phoneLabel: 'Phone',
-    phone: '+258 84 663 4635',
-    contactPerson: 'Simão Guambe',
+    contacts: [
+      { name: 'Lan Anh Nguyen', role: 'CEO', phone: '+258 84 020 3916' },
+      { name: 'Simão Guambe', phone: '+258 84 663 4635' },
+    ],
     cta: 'Send email',
     identity: [
       'HLC Renewable Energies and Infrastructures, LDA',

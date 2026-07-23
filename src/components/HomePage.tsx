@@ -326,20 +326,27 @@ export default function HomePage({ locale }: { locale: Locale }) {
                     </p>
                   </div>
 
-                  {c.contact.phone && (
+                  {c.contact.contacts.length > 0 && (
                     <div className="pt-4">
                       <h4 className="text-xs text-gray-500 mb-1">{c.contact.phoneLabel}</h4>
-                      <p className="text-gray-900 text-sm font-medium">
-                        <a
-                          href={`tel:${c.contact.phone.replace(/\s+/g, '')}`}
-                          className="hover:text-hlc-blue-600 transition-colors"
-                        >
-                          {c.contact.phone}
-                        </a>
-                      </p>
-                      {c.contact.contactPerson && (
-                        <p className="text-gray-500 text-sm mt-0.5">{c.contact.contactPerson}</p>
-                      )}
+                      <div className="space-y-3">
+                        {c.contact.contacts.map((person) => (
+                          <div key={person.phone}>
+                            <p className="text-gray-900 text-sm font-medium">
+                              <a
+                                href={`tel:${person.phone.replace(/\s+/g, '')}`}
+                                className="hover:text-hlc-blue-600 transition-colors"
+                              >
+                                {person.phone}
+                              </a>
+                            </p>
+                            <p className="text-gray-500 text-sm mt-0.5">
+                              {person.name}
+                              {person.role ? `, ${person.role}` : ''}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   )}
 

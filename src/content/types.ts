@@ -76,10 +76,8 @@ export type SiteContent = {
     emailLabel: string
     email: string
     phoneLabel: string
-    /** Empty until a real number is supplied; rendered only when set. */
-    phone: string
-    /** Named contact person shown with the phone; empty to hide. */
-    contactPerson: string
+    /** Named phone contacts; each rendered with an optional role. Empty to hide the block. */
+    contacts: { name: string; role?: string; phone: string }[]
     cta: string
     identity: string[]
     form: ContactForm
