@@ -11,3 +11,7 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# Large binaries — keep out of git (too big for GitHub's 100MB limit)
+Company Profile (1).pdf
+*.pdf
